@@ -1,623 +1,691 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="fan">
+  <meta name="keywords" content="">
   
-  <title>凡</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="凡">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="rainy">
 <meta property="og:url" content="https://fan4love.github.io/page/12/index.html">
-<meta property="og:site_name" content="凡">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="x">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="凡" type="application/atom+xml">
+<meta property="og:site_name" content="rainy">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="fan">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>rainy</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"fan4love.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 </head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">凡</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">见字如面</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fan4love.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-无关" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E6%97%A0%E5%85%B3/2021/03/05/" class="article-date">
-  <time class="dt-published" datetime="2021-03-05T10:58:24.000Z" itemprop="datePublished">2021-03-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E6%97%A0%E5%85%B3/2021/03/05/">无关</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>山海腐朽，人类绵延<br>悲喜都与你我无关<br>唐宋无迹，诗词湮灭<br>风雅都随故人去也</p>
-<p>舞榭歌台 斜阳草树<br>金戈铁马 气吞如虎<br>纷纷的雨 滴落<br>纷纷的事 谁记得？</p>
-<p>佳人如玉 朱颜胜花<br>回眸一笑 使愧云霞<br>莲步生风 轻轻而下<br>楼前皎月 赠我无瑕</p>
-<p>山海腐朽，人类绵延<br>悲喜都与你我无关<br>唐宋无迹，诗词湮灭<br>风雅都随故人去也</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E6%97%A0%E5%85%B3/2021/03/05/" data-id="clnn8fjdd003de0u51l7u9ggj" data-title="无关" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%B0%8F%E8%AF%97/" rel="tag">小诗</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-赴宴" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E8%B5%B4%E5%AE%B4/2021/02/20/" class="article-date">
-  <time class="dt-published" datetime="2021-02-20T12:41:59.000Z" itemprop="datePublished">2021-02-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E8%B5%B4%E5%AE%B4/2021/02/20/">赴宴</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>2021&#x2F;2&#x2F;20 20:49<br>邻桌上一女孩玉面朱唇，姣好婀娜，煞是勾人心魂。我不时侧脸瞧上一眼，短短邂逅，虽有青睐，但也仅此而已。待这宴席散尽，座位空空，记忆也将被清零。我也将渐渐忘却，是遗憾是解脱，谁能说得准确？</p>
-<p>2021&#x2F;2&#x2F;20 21:07—21:28<br>她离座出去。邻桌的座位同时空了四个。我面无表情，内心空空。以为她已经走了。过一会儿她回来了，在大厅前台与男友交谈。淡蓝色牛仔裤，白长靴，窈窕婀娜，身段优雅，不时走动。门前的帘子遮挡她的上半身，只留下半身、到腰前的部分。当我写到这里的时候她从我身后经过，带起一缕轻风，她的衣服腰间右侧蹭到我外套帽子后面。她落座与女伴笑谈，听其言语，很俗，看其面貌，很雅。“颜值就是正义”，流行语曾这么说道。<br>用左眼的余光感受她的存在、她的欢笑、她的活泼、她的沉默、她的调情话语，装作偶然扭头，刻意不漏马脚。世界这么大，遇见就是告别了。她的男友很有礼貌，帮我们这桌捎带了豆皮这个原材料，我对他说谢谢，他说没事。身既高又瘦长，很好看，比我更适合。<br>某个角度看，她也并不令我倾倒，所以其实也没什么好遗憾的。能遇到，知道世间有此佳人，便已足够。<br>细听她的声音，也并不清雅动听，有一丝丝的沙哑粗糙，一丝丝而已，但这也在向我证明她并非我最初设想的那么完美。但还是被她吸引了。她已随人远走，未曾向我告别。而我也在低头打字，抬头时她在转角的时候。<br>婀娜使人心醉，但这就足够，不需要后续了。只有遗憾才会让故事美丽，太完美反而妨碍人们欣赏。</p>
-<p>2021&#x2F;2&#x2F;20 21:49<br>你的座位已经空了，下面有两个倒地的啤酒瓶，其中一个跟个指南针一样，真的很好笑，另一个指向南偏东35°方向，它比“指南针”要靠北边一些。你的椅子坐东朝西又稍稍偏南20°。你的面向是西偏南17°左右，你的位置是以桌中心为原点，东偏北17°左右。你的男友和你相差10°，坐在你右侧，我和你相差150°，坐在你的斜对面的桌子前。心里不禁感叹，椅子都比我幸运啊，能有幸亲近你的芳泽，能承载你的体重，能感受你的温度。能和你邂逅一场，有模有样。多说无益，是我情感泛滥了。</p>
-<p>2021&#x2F;2&#x2F;20 22:09<br>杯盏圆润，不知道怎么形容了，嗯…开口圆圆的，下半部分要窄一些，有些过渡，白色瓷质。你的秀发泯灭了，只留些许木屑。<br>我喝完了剩下的茶水，褐色，四分之三，凉凉的，微微的甜，然后离开。不多时，已经到家附近，一切如旧，不曾改变丝毫。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E8%B5%B4%E5%AE%B4/2021/02/20/" data-id="clnn8fjho006fe0u52g6uh3he" data-title="赴宴" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-何物" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E4%BD%95%E7%89%A9/2021/02/12/" class="article-date">
-  <time class="dt-published" datetime="2021-02-12T10:56:48.000Z" itemprop="datePublished">2021-02-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E4%BD%95%E7%89%A9/2021/02/12/">何物</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>不知离别何物<br>你在前方停住<br>我的歌声轻轻<br>牵引清秀侧目</p>
-<p>不知风月何物<br>你的回眸特殊<br>愿作鱼忘江湖<br>至少青睐半途</p>
-<p>不知遗憾何物<br>你用相思束缚<br>我的故事倾诉<br>直到听客满屋</p>
-<p>不知落寞何物<br>你的姿容楚楚<br>我的情思飞舞<br>落在谁家春树</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E4%BD%95%E7%89%A9/2021/02/12/" data-id="clnn8fjgw004ve0u57lq4d2tp" data-title="何物" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-花期" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E8%8A%B1%E6%9C%9F/2021/02/08/" class="article-date">
-  <time class="dt-published" datetime="2021-02-08T10:56:13.000Z" itemprop="datePublished">2021-02-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E8%8A%B1%E6%9C%9F/2021/02/08/">花期</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>喜爱或许终会过期<br>就像墙壁注定颓圮（pǐ）<br>然而颜色尚在花期<br>不如且尽今朝乐极</p>
-<p>你的款款携带清丽<br>无色无味无有情意<br>为何渗入我的墨笔<br>为何多载徒留心里</p>
-<p>草木皆兵风声鹤唳<br>似是而非转身无你<br>容颜消散恩怨涌起<br>人已渺茫多番重提</p>
-<p>春燕翩翩归我故里<br>夏荫浓浓遮我回忆<br>秋声萧萧予我静极<br>冬月姣姣人间自惜</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E8%8A%B1%E6%9C%9F/2021/02/08/" data-id="clnn8fik1000ae0u53mr5d32a" data-title="花期" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-桃花" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E6%A1%83%E8%8A%B1/2021/01/22/" class="article-date">
-  <time class="dt-published" datetime="2021-01-22T10:55:32.000Z" itemprop="datePublished">2021-01-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E6%A1%83%E8%8A%B1/2021/01/22/">桃花</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>多想可喜之事<br>莫悲不遇之人<br>风寒不灭情焰<br>月皎何妨夜暗</p>
-<p>等相思化雨 从你伞边滑落<br>滴滴点点替我诉说<br>看回忆成潮 在你身旁起落<br>声声响响为我不辍</p>
-<p>春山清涧 邂逅轻盈玉颜<br>分明是你 艳胜桃花满园<br>妙音佳意 寻常何幸得见<br>一朝盛事 相携优容流连</p>
-<p>千载容易散作云烟<br>既然此刻就在眼前<br>为你描述那桃花扇<br>我陌上不歇的辗转</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E6%A1%83%E8%8A%B1/2021/01/22/" data-id="clnn8fjdi003pe0u5fylwh4yp" data-title="桃花" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-行船" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E8%A1%8C%E8%88%B9/2020/12/07/" class="article-date">
-  <time class="dt-published" datetime="2020-12-07T05:29:54.000Z" itemprop="datePublished">2020-12-07</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E8%A1%8C%E8%88%B9/2020/12/07/">行船</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>时光的行船拖尾回忆<br>彼时的清皎秀妍逢你<br>在冬寒的深夜人群游戏<br>而我在身旁 嘈杂都静寂</p>
-<p>是千秋的宏图不堪提<br>亦是俗人哪知晓我与你</p>
-<p>不曾盛开每一个四季<br>春风也沉醉你的美丽<br>未尝彻夜秉烛暖心意<br>惟有桐花飞落知风起</p>
-<p>光阴不知停船<br>我不知重逢之期<br>你不知我心与意<br>都教明月照落在长夜里</p>
-<p>待夜尽翠叶娇而欲滴<br>待叶茂夏蝉又声声起<br>等蝉灭我归秋深<br>缄口不言想说的你</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E8%A1%8C%E8%88%B9/2020/12/07/" data-id="clnn8fjeu003we0u5an762gqg" data-title="行船" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-玉轮" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E7%8E%89%E8%BD%AE/2020/11/17/" class="article-date">
-  <time class="dt-published" datetime="2020-11-16T17:49:14.000Z" itemprop="datePublished">2020-11-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E7%8E%89%E8%BD%AE/2020/11/17/">玉轮</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>#玉轮跃出水面 光辉满天<br>你乘风 她翩翩 有你<br>长生不慕 羡煞旁客</p>
-<p>佳期不是过去 不是未来<br>是有你的此刻 光影寥落；<br>纷扰 闲事 尽数挥袖去之<br>携带一书一友一伞</p>
-<p>斜斜雨飞 花坠 细看 你面<br>细看艳阳向晚 回首你在身边<br>身边笑意似浓还浅<br>捉摸不透你的灵动；</p>
-<p>#玉轮藏身云间 光辉半掩<br>你暗叹 她纤纤 有你<br>云浓风急 止住丝弦</p>
-<p>舞步不为古人 不为来者<br>是为你而旋转 红瓣漂泊；<br>细节 惦念 竟然延续经年<br>轻抚一枝一风一影</p>
-<p>纷纷纸飞 墨褪 任凭 风景<br>任凭往事无存 初遇似那流星<br>侧目瞧见璀璨生平<br>纵使湮灭逢你甚幸</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E7%8E%89%E8%BD%AE/2020/11/17/" data-id="clnn8fjhg005ze0u54dbl4810" data-title="玉轮" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-桂香" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E6%A1%82%E9%A6%99/2020/11/15/" class="article-date">
-  <time class="dt-published" datetime="2020-11-15T05:16:44.000Z" itemprop="datePublished">2020-11-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E6%A1%82%E9%A6%99/2020/11/15/">桂香</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>天之南 海之北<br>你置身我视线外<br>耳之旁 枕之侧<br>而音色穿越山海</p>
-<p>你说桂香已跃窗<br>悄无声息入厅堂<br>你在赞叹这芬芳<br>佐饮两杯明月光</p>
-<p>虫鸣是秋末的盛宴<br>气氛由夜色来铺垫<br>是怎样的浮萍漂转<br>令我有幸而可得见？</p>
-<p>你宽慰别刻意执著<br>人生就应行事洒脱<br>这半宿衷心谁谈说<br>无限清欢赠与你我</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E6%A1%82%E9%A6%99/2020/11/15/" data-id="clnn8fjh9005ke0u50hs799wu" data-title="桂香" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-轻漾" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E8%BD%BB%E6%BC%BE/2020/11/11/" class="article-date">
-  <time class="dt-published" datetime="2020-11-10T17:45:08.000Z" itemprop="datePublished">2020-11-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E8%BD%BB%E6%BC%BE/2020/11/11/">轻漾</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>海蓝天空 乳白云朵<br>身旁你盈盈而过<br>橙红晚霞 草青柳色<br>往事正附耳细说</p>
-<p>微痒从你指间爬我后背<br>笑如骤燃的焰火<br>且让晶莹剔透对我耳语<br>心是轻漾的舟波</p>
-<p>等待可以令红豆凋落<br>也能使思念成为传说<br>看浩瀚宇宙终究空寞<br>我怎么信你只是描摹</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E8%BD%BB%E6%BC%BE/2020/11/11/" data-id="clnn8fipc0020e0u5eak97hxo" data-title="轻漾" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-雨丝" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E9%9B%A8%E4%B8%9D/2020/11/06/" class="article-date">
-  <time class="dt-published" datetime="2020-11-05T17:16:52.000Z" itemprop="datePublished">2020-11-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E9%9B%A8%E4%B8%9D/2020/11/06/">雨丝</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>时间总无端流失<br>尤其是逢你之时<br>路灯已照出影子<br>目光划谁的玉指</p>
-<p>等待是我的故事<br>怅惘因你的对视<br>临别时没有告辞<br>转身后遗憾放肆</p>
-<p>纵然有千段雨丝<br>即便是滂沱无止<br>偶然见皓月来此<br>恰如你近我当时</p>
-<p>曾以为心如磐石<br>可如今天涯不知<br>曾认定缘尽此世<br>却依然乘舟而至</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E9%9B%A8%E4%B8%9D/2020/11/06/" data-id="clnn8fjhp006ie0u59c0g018b" data-title="雨丝" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/page/11/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><a class="page-number" href="/page/14/">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/13/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Economist/" rel="tag">Economist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E6%91%98/" rel="tag">书摘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%97/" rel="tag">小诗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%8C%E8%AF%8D/" rel="tag">歌词</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Economist/" style="font-size: 20px;">Economist</a> <a href="/tags/Python/" style="font-size: 11.67px;">Python</a> <a href="/tags/%E4%B9%A6%E6%91%98/" style="font-size: 10px;">书摘</a> <a href="/tags/%E5%B0%8F%E8%AF%97/" style="font-size: 18.33px;">小诗</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 13.33px;">日记</a> <a href="/tags/%E6%AD%8C%E8%AF%8D/" style="font-size: 15px;">歌词</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 16.67px;">碎碎念</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/01/">January 2005</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/hello-world/2023/10/12/">Hello World</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/2023/10/12/">我的第一篇</a>
-          </li>
         
-          <li>
-            <a href="/%E5%BE%88%E5%A5%BD/2023/10/12/">很好</a>
-          </li>
-        
-          <li>
-            <a href="/%E6%88%91%E5%9C%A8%E6%B5%8B%E8%AF%95/2023/10/11/">我在测试</a>
-          </li>
-        
-          <li>
-            <a href="/%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95/2023/10/10/">最新进展</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
       
-      &copy; 2023 x<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</footer>
+</div>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%97%A0%E5%85%B3/2021/03/05/" target="_self">
+          无关
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%97%A0%E5%85%B3/2021/03/05/" target="_self">
+        <div>
+          山海腐朽，人类绵延悲喜都与你我无关唐宋无迹，诗词湮灭风雅都随故人去也 舞榭歌台 斜阳草树金戈铁马 气吞如虎纷纷的雨 滴落纷纷的事 谁记得？ 佳人如玉 朱颜胜花回眸一笑 使愧云霞莲步生风 轻轻而下楼前皎月 赠我无瑕 山海腐朽，人类绵延悲喜都与你我无关唐宋无迹，诗词湮灭风雅都随故人去也
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-03-05 18:58" pubdate>
+              2021-03-05
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E5%B0%8F%E8%AF%97/">#小诗</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%B5%B4%E5%AE%B4/2021/02/20/" target="_self">
+          赴宴
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E8%B5%B4%E5%AE%B4/2021/02/20/" target="_self">
+        <div>
+          2021&#x2F;2&#x2F;20 20:49邻桌上一女孩玉面朱唇，姣好婀娜，煞是勾人心魂。我不时侧脸瞧上一眼，短短邂逅，虽有青睐，但也仅此而已。待这宴席散尽，座位空空，记忆也将被清零。我也将渐渐忘却，是遗憾是解脱，谁能说得准确？ 2021&#x2F;2&#x2F;20 21:07—21:28她离座出去。邻桌的座位同时空了四个。我面无表情，内心空空。以为她已经走了。过一会儿她回来了，在大厅前台
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-20 20:41" pubdate>
+              2021-02-20
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">#碎碎念</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E4%BD%95%E7%89%A9/2021/02/12/" target="_self">
+          何物
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E4%BD%95%E7%89%A9/2021/02/12/" target="_self">
+        <div>
+          不知离别何物你在前方停住我的歌声轻轻牵引清秀侧目 不知风月何物你的回眸特殊愿作鱼忘江湖至少青睐半途 不知遗憾何物你用相思束缚我的故事倾诉直到听客满屋 不知落寞何物你的姿容楚楚我的情思飞舞落在谁家春树
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-12 18:56" pubdate>
+              2021-02-12
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%8A%B1%E6%9C%9F/2021/02/08/" target="_self">
+          花期
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E8%8A%B1%E6%9C%9F/2021/02/08/" target="_self">
+        <div>
+          喜爱或许终会过期就像墙壁注定颓圮（pǐ）然而颜色尚在花期不如且尽今朝乐极 你的款款携带清丽无色无味无有情意为何渗入我的墨笔为何多载徒留心里 草木皆兵风声鹤唳似是而非转身无你容颜消散恩怨涌起人已渺茫多番重提 春燕翩翩归我故里夏荫浓浓遮我回忆秋声萧萧予我静极冬月姣姣人间自惜
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-08 18:56" pubdate>
+              2021-02-08
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%A1%83%E8%8A%B1/2021/01/22/" target="_self">
+          桃花
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%A1%83%E8%8A%B1/2021/01/22/" target="_self">
+        <div>
+          多想可喜之事莫悲不遇之人风寒不灭情焰月皎何妨夜暗 等相思化雨 从你伞边滑落滴滴点点替我诉说看回忆成潮 在你身旁起落声声响响为我不辍 春山清涧 邂逅轻盈玉颜分明是你 艳胜桃花满园妙音佳意 寻常何幸得见一朝盛事 相携优容流连 千载容易散作云烟既然此刻就在眼前为你描述那桃花扇我陌上不歇的辗转
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-22 18:55" pubdate>
+              2021-01-22
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%A1%8C%E8%88%B9/2020/12/07/" target="_self">
+          行船
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E8%A1%8C%E8%88%B9/2020/12/07/" target="_self">
+        <div>
+          时光的行船拖尾回忆彼时的清皎秀妍逢你在冬寒的深夜人群游戏而我在身旁 嘈杂都静寂 是千秋的宏图不堪提亦是俗人哪知晓我与你 不曾盛开每一个四季春风也沉醉你的美丽未尝彻夜秉烛暖心意惟有桐花飞落知风起 光阴不知停船我不知重逢之期你不知我心与意都教明月照落在长夜里 待夜尽翠叶娇而欲滴待叶茂夏蝉又声声起等蝉灭我归秋深缄口不言想说的你
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-07 13:29" pubdate>
+              2020-12-07
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E7%8E%89%E8%BD%AE/2020/11/17/" target="_self">
+          玉轮
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E7%8E%89%E8%BD%AE/2020/11/17/" target="_self">
+        <div>
+          #玉轮跃出水面 光辉满天你乘风 她翩翩 有你长生不慕 羡煞旁客 佳期不是过去 不是未来是有你的此刻 光影寥落；纷扰 闲事 尽数挥袖去之携带一书一友一伞 斜斜雨飞 花坠 细看 你面细看艳阳向晚 回首你在身边身边笑意似浓还浅捉摸不透你的灵动； #玉轮藏身云间 光辉半掩你暗叹 她纤纤 有你云浓风急 止住丝弦 舞步不为古人 不为来者是为你而旋转 红瓣漂泊；细节 惦念 竟然延续经年轻抚一枝一风一影 纷纷纸飞
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-17 01:49" pubdate>
+              2020-11-17
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%A1%82%E9%A6%99/2020/11/15/" target="_self">
+          桂香
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%A1%82%E9%A6%99/2020/11/15/" target="_self">
+        <div>
+          天之南 海之北你置身我视线外耳之旁 枕之侧而音色穿越山海 你说桂香已跃窗悄无声息入厅堂你在赞叹这芬芳佐饮两杯明月光 虫鸣是秋末的盛宴气氛由夜色来铺垫是怎样的浮萍漂转令我有幸而可得见？ 你宽慰别刻意执著人生就应行事洒脱这半宿衷心谁谈说无限清欢赠与你我
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-15 13:16" pubdate>
+              2020-11-15
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%BD%BB%E6%BC%BE/2020/11/11/" target="_self">
+          轻漾
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E8%BD%BB%E6%BC%BE/2020/11/11/" target="_self">
+        <div>
+          海蓝天空 乳白云朵身旁你盈盈而过橙红晚霞 草青柳色往事正附耳细说 微痒从你指间爬我后背笑如骤燃的焰火且让晶莹剔透对我耳语心是轻漾的舟波 等待可以令红豆凋落也能使思念成为传说看浩瀚宇宙终究空寞我怎么信你只是描摹
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-11 01:45" pubdate>
+              2020-11-11
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E9%9B%A8%E4%B8%9D/2020/11/06/" target="_self">
+          雨丝
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E9%9B%A8%E4%B8%9D/2020/11/06/" target="_self">
+        <div>
+          时间总无端流失尤其是逢你之时路灯已照出影子目光划谁的玉指 等待是我的故事怅惘因你的对视临别时没有告辞转身后遗憾放肆 纵然有千段雨丝即便是滂沱无止偶然见皓月来此恰如你近我当时 曾以为心如磐石可如今天涯不知曾认定缘尽此世却依然乘舟而至
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-11-06 01:16" pubdate>
+              2020-11-06
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/11/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/#board">10</a><a class="page-number" href="/page/11/#board">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/#board">13</a><a class="page-number" href="/page/14/#board">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#board">18</a><a class="extend next" rel="next" href="/page/13/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>

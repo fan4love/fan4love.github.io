@@ -1,1022 +1,698 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="fan">
+  <meta name="keywords" content="">
   
-  <title>凡</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="凡">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="rainy">
 <meta property="og:url" content="https://fan4love.github.io/page/2/index.html">
-<meta property="og:site_name" content="凡">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="x">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="凡" type="application/atom+xml">
+<meta property="og:site_name" content="rainy">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="fan">
+<meta name="twitter:card" content="summary_large_image">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
   
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>rainy</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
 
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"fan4love.github.io","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
   
 </head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">凡</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">见字如面</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
         
-      </nav>
-      <nav id="sub-nav">
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fan4love.github.io"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-焰火" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E7%84%B0%E7%81%AB/2023/02/27/" class="article-date">
-  <time class="dt-published" datetime="2023-02-27T12:47:21.000Z" itemprop="datePublished">2023-02-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E7%84%B0%E7%81%AB/2023/02/27/">焰火</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>邻国大军压境，<br>有谣言第一公民已经逃命，<br>年轻情侣在故土难离，<br>却要抵御撒旦的偷袭。</p>
-<p>鲜花飘洒在废墟，<br>教堂的神父为二人见证，<br>前线的路途并肩走过，<br>护卫尊严与自我。</p>
-<p>而你在我的身旁缠绕着，<br>像斑斓的焰火，<br>像迷人的情歌。</p>
-<p>在你我头顶掠过的炮火，<br>是冬日的冷漠，<br>是将近的胜果。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E7%84%B0%E7%81%AB/2023/02/27/" data-id="clnn8fiqr002se0u55bq67qbx" data-title="焰火" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-蚁人" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E8%9A%81%E4%BA%BA/2023/02/25/" class="article-date">
-  <time class="dt-published" datetime="2023-02-25T15:20:51.000Z" itemprop="datePublished">2023-02-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E8%9A%81%E4%BA%BA/2023/02/25/">蚁人</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>剜开土壤深处的蚁穴<br>是工蚁踉跄的步伐<br>曲曲折折的通道<br>三维空间尽情延伸</p>
-<p>在地面搭建了土丘<br>暴雨以后的洞口<br>毫无意识的劳作<br>繁衍生息两亿年</p>
-<p>地震或是小行星<br>恐龙灭绝在史前<br>蚂蚁不会哭或笑<br>是好是坏如何论定？</p>
-<p>剜开蚁穴的深处，<br>蚁后身旁的新生儿，<br>想必夏日都成熟，<br>奔波不知何为乐趣。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E8%9A%81%E4%BA%BA/2023/02/25/" data-id="clnn8fjhn006ce0u56i1u1wmn" data-title="蚁人" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-浮生若梦" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E6%B5%AE%E7%94%9F%E8%8B%A5%E6%A2%A6/2023/02/13/" class="article-date">
-  <time class="dt-published" datetime="2023-02-13T09:44:58.000Z" itemprop="datePublished">2023-02-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E6%B5%AE%E7%94%9F%E8%8B%A5%E6%A2%A6/2023/02/13/">浮生若梦</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>曾在黎明 独行林中的小径<br>偶然见你眼睛<br>落花飞舞盘旋在我心<br>身边有你的影</p>
-<p>你的步履轻轻盈盈<br>梦幻的精灵<br>愿化作阳光与你相拥<br>是穿梭绿叶的晴明</p>
-<p>林中你 清泉意<br>在我视线半悬停<br>玫瑰却黯然<br>一瞬间就凋零</p>
-<p>常见锦衣皓月之下<br>所爱隔丘陵<br>任鱼游千里<br>为我送达信中情</p>
-<p>总知白驹逃<br>所念恰似飞星<br>寒枝拣尽 风沙吹散<br>乘舟漂流随晨晚</p>
-<p>浮生清欢 易作云烟<br>日出潮落年复年<br>净心无言 雪山风寒<br>玫瑰心头绽 一梦间</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E6%B5%AE%E7%94%9F%E8%8B%A5%E6%A2%A6/2023/02/13/" data-id="clnn8fjhe005ve0u5605t99l3" data-title="浮生若梦" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%AD%8C%E8%AF%8D/" rel="tag">歌词</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-晨晚之风" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E6%99%A8%E6%99%9A%E4%B9%8B%E9%A3%8E/2023/01/30/" class="article-date">
-  <time class="dt-published" datetime="2023-01-30T11:50:19.000Z" itemprop="datePublished">2023-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E6%99%A8%E6%99%9A%E4%B9%8B%E9%A3%8E/2023/01/30/">晨晚之风</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>旧的我在扉页写下日期<br>凛冽晨风 尚是冬季<br>迎着新年的风 体味寒意<br>奔走多少公里 热切寻觅</p>
-<p>讯号借助互联网的蛛丝<br>捕捉你的回应<br>像是盲目的漂流瓶<br>水上海里 颠簸流离 </p>
-<p>新的我在书页取出枯花<br>温热晚风 曾是夏季<br>听着耳畔的风 体验惊喜<br>辗转多少日夜 点点滴滴</p>
-<p>雨的自由是落入土地<br>亦是蒸腾 飞到天际<br>我的自由是久候柳堤<br>亦是离场 星河游弋</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E6%99%A8%E6%99%9A%E4%B9%8B%E9%A3%8E/2023/01/30/" data-id="clnn8fjh7005fe0u5fj84g80r" data-title="晨晚之风" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-雅思1000词" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E9%9B%85%E6%80%9D1000%E8%AF%8D/2023/01/29/" class="article-date">
-  <time class="dt-published" datetime="2023-01-29T05:10:11.000Z" itemprop="datePublished">2023-01-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E9%9B%85%E6%80%9D1000%E8%AF%8D/2023/01/29/">雅思1000词</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <html>
-<head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>雅思1000词</title></head>
-<body><h1>Unit 1. The Abduction</h1>
-<p>第一单元 绑架</p>
-<p>An adage says that adversity is transient. The following allegory is an example.
-Long, long ago there were two couples that had no children. They adopted a boy named Terry. They were affable to Terry and Terry adored them very much.</p>
-<p>有句谚语说，逆境是短暂的。下面这个寓言就是一个例子。  很久很久以前，有两对夫妇没有孩子。他们收养了一个叫泰瑞的男孩。他们对泰瑞和蔼可亲，泰瑞也非常崇拜他们。</p>
-<p>They lived an amicable life and amassed affluent affections.
-One day two bad men came to the village. They found Terry and accosted him: “Are your parents at home?” “No, they went to drink in the tavern.” terry replied. “Good!” alleged one of them, “I’ve heard of an anecdote saying that, there’s a bulk of ablaze antique treasure hidden somewhere near the apex of the mountain.</p>
-<p>他们过着和睦的生活，积累了丰富的感情。  有一天，村里来了两个坏人。他们找到了泰瑞并与他搭讪。&quot;你的父母在家里吗？&quot; &quot;不在，他们去酒馆喝酒了。&quot;泰瑞回答。&quot;很好！&quot;其中一个人说，&quot;我听说过一则轶事，说是在山顶附近的某个地方藏有一大批燃烧的古董宝藏。</p>
-<p>Do you wish to find it out with us?” Terry was a boy with agility. He was allured and acclaimed: “Wonderful! I’ll affiliate you.”
-Consequently, Terry’s parents did find him when they came back. “Maybe you have alienated Terry. He finds you acrimonious and left.</p>
-<p>你想和我们一起找到它吗？&quot; 特里是个有灵性的男孩。他受到了诱惑和赞誉。&quot;太好了! 我将与你合作。&quot;  结果，泰瑞的父母回来后确实找到了他。&quot;也许你已经疏远了特瑞。他发现你很尖锐，就离开了。</p>
-<p>” The mother said in anguish. “I do not doubt his allegiance; He may have been abducted.” replied the father.
-Just then they received a mail with an annex amalgamated with the text. In the appendix there was an abridged letter: “Your son is in our hands.</p>
-<p>&quot; 母亲痛苦地说道。&quot;我不怀疑他的忠诚；他可能被绑架了。&quot;父亲回答。  就在这时，他们收到了一封邮件，其中有一个与正文合并的附件。在附件中，有一封节略的信。&quot;你的儿子在我们手中。</p>
-<p>We’ve abated his diet and annulled his sleep. We want $10,000 for absolving him. If you are amenable to our advisable request, send the money to the allocated aperture of the sewer at the north of the village within two days; if you adjourn, you’ll never see him again!” the letter admonished without any annotation. The letter was not abstruse, but the abhorrent allusion drove them into agony. Quickly they called the police.</p>
-<p>我们已经减少了他的饮食，取消了他的睡眠。我们想要一万美元来免除他的罪责。如果你能接受我们的明智要求，请在两天内把钱送到村北下水道的分配口；如果你延期，你就再也见不到他了！&quot;信中没有任何注释地告诫道。信的内容并不深奥，但可恶的暗示使他们陷入痛苦之中。他们很快就报了警。
-    
-<p>Several policemen were allotted to the case. They were adroit and adept in their job. Soon they rescued Terry and treated him with antiseptics. The couple felt abashed: “Thanks to the police, their affinity to spec ops amazed us. We’ll abstain drinking and accentuate the agrarian work.</p></p>
-<p>有几名警察被分配到这个案件中。他们在工作中表现得非常机敏和熟练。很快，他们救出了泰瑞，并对他进行了消毒处理。这对夫妇感到很羞愧。&quot;感谢警察，他们对特种部队的亲和力让我们吃惊。我们会戒酒，强调农业工作。
-    ”
-The criminal and his accomplice were accused for abduction but were acquitted although proof was against them, because the avaricious judge adopted their bribery.
-(April, 2th)</p>
-<p>&quot;  罪犯和他的同伙被指控绑架，但由于贪婪的法官采纳了他们的贿赂，尽管证据对他们不利，但还是被宣告无罪。 (4月2日) </p>
-<h1>Unit 2. Greed</h1>
-<p>第二单元 贪婪  </p>
-<p>There were two archaic countries called Albania and Croatia long ago. Albania was arid and bleak while Croatia arable. The king of Albania was an autocrat with belligerent bent who begrudged Croatia and belittled her armament, and he decided to assail Croatia.
-Firstly, he sent an astute ambassador in bleached apparel to visit Croatia.</p>
-<p>很久以前，有两个古老的国家叫阿尔巴尼亚和克罗地亚。阿尔巴尼亚干旱而荒凉，而克罗地亚则是可耕地。阿尔巴尼亚国王是个好战的专制者，他嫉妒克罗地亚，贬低她的军备，他决定袭击克罗地亚。  首先，他派了一位精明的大使，穿着漂白的衣服访问克罗地亚。</p>
-<p>The king of Croatia held a banquet and appointed him. He avowed: “We Croatians are bestowed by God the ardent aptitudes. We are ascetic as to have few assets and bequests. We’re also assiduous and keep austerity.” “Sure,” the messenger beguiled, “Your people have begotten(原形beget) great attainments, and we want to barter with your country.</p>
-<p>克罗地亚国王举行了一次宴会，任命了他。他宣称 &quot;我们克罗地亚人被上帝赋予了热情的本领。我们是禁欲主义者，没有多少资产和遗赠。我们也很勤奋，保持节俭。&quot; &quot;当然，&quot;这位信使求之不得，&quot;你们的人民已经取得了伟大的成就，我们想与贵国进行交易。”</p>
-<p>On hearing that, the Albania king said: “Good, nobody can balk us.” And he basted Croatia with his army. They bereaved Croatia’s land and beset its capital. The Croatia king was astounded and berated: “You shit belied your avid aspire for our land and blemished justice!” All Croatian officials were befuddled and began to bicker with each other. Only one minister said: “Although situation is arduous, we shall not apprehend them.
-&quot;  </p>
-<p>阿尔巴尼亚国王听到后说。&quot;很好，没有人可以阻挡我们。&quot; 然后他用他的军队袭击了克罗地亚。他们掠夺了克罗地亚的土地，包围了它的首都。克罗地亚国王大吃一惊，大加责备。&quot;你们这些狗屁不通的人，对我们的土地不屑一顾，玷污了正义！&quot; 所有克罗地亚官员都懵了，开始互相争吵。只有一位部长说。&quot;虽然情况很困难，但我们不会逮捕他们。</p>
-<p>I’ve appraised them and asserted that their ardor won’t last long. Everything is auspicious and will get assuaged.”
-The Albania-forces’ general thought: “Our king is too bigoted. Ever since I passed his audition and became general, my allegiance has been basked in attrition. I’ve awed him, but now filled with aversion.</p>
-<p>我已经评估了他们，并断言他们的热情不会持续太久。一切都是吉利的，会得到缓解的。&quot;  阿尔巴尼亚部队的将军认为。&quot;我们的国王太偏执了。自从我通过他的试镜，成为将军后，我的忠诚就一直沐浴在损耗中。我曾让他敬畏，但现在却充满了厌恶。</p>
-<p>I’ll kill him and retire. I’m apt to study barometer.” So he aspersed: “Our king is avaricious and barbarous. We shouldn’t bend to his arrogance.” Then he sent an assassin and assassinated the king.</p>
-<p>我会杀了他然后退休。我很喜欢研究晴雨表。&quot; 于是他反驳道：&quot;我们的国王是贪婪的，野蛮的。我们不应该屈服于他的傲慢。&quot; 然后他派了一个刺客，刺杀了国王。
-    
-<p>(April, 3th) </p></p>
-<p>(4月3日) </p>
-<h1>Unit 3. Prisoners of War</h1>
-<p>第三单元 战俘</p>
-<p>Thousands of war prisoners were kept in captivity in the bulky camp. They lived in clutter and had to deal with chores. They must show categorical obedience or else receive caustic chiding. The guarding officers censure them very often, as well as clamor carnal punishments. Some captives got bruise and clots all over.</p>
-<p>成千上万的战俘被囚禁在笨重的营地里。他们住在杂乱无章的地方，必须处理杂务。他们必须表现出绝对的服从，否则就会受到严厉的责罚。看守人员经常训斥他们，还叫嚣着要进行肉体惩罚。有些俘虏全身都有伤痕和血块。</p>
-<p>Male prisoners lost their collaterals and female ones failed to keep chaste.
-They wear burnished canvas, and rested in circumscribed room with small capacity and caliber. They chafe each other and brawled frequently. They were chary of moving and can hardly budge. Their situations captivated lots of reporters, who castigated the government with cogent proof.</p>
-<p>男囚犯失去了他们的领带，女囚犯没有保持贞洁。  他们穿上烧过的帆布，在容量和口径都很小的房间里休息。他们相互摩擦，经常争吵。他们不敢动弹，几乎不能动弹。他们的情况吸引了很多记者，他们用有力的证据指责政府。</p>
-<p>However, the government gave bombastic data and bragged about the conditions in the camps.
-After the calamity of war ceased, large numbers of captives were longing for the boon of brisk and free life. According to a clandestine bond between the two canny governments, a process of exchanging captives will soon commence. This is considered as opening a cleft in the clogged wall between the two countries.</p>
-<p>然而，政府给出了夸张的数据，并吹嘘难民营的条件。  在战争灾难停止后，大量的俘虏渴望过上轻松和自由的生活。根据两个狡猾的政府之间的秘密联系，交换俘虏的过程将很快开始。这被认为是在两国之间堵塞的墙壁上打开了一条裂缝。 (4月4日) </p>
-<p>(April, 4th)</p>
-<h1>Unit 4. Laden’s End</h1>
-<p>第四单元 拉登的结局</p>
-<p>As Osama Ben Laden(奥萨马-本-拉登)’s forces failed contending with the Northern Confederate, he had to abandon the commodious capital city of Kabul and conceal his trail inside the contour of large mountains and caverns.</p>
-<p> 由于奥萨马-本-拉登(Osama Ben Laden)的部队在与北方联盟的斗争中失败了，他不得不放弃商品化的首都喀布尔，将他的足迹隐藏在大山和洞穴的轮廓中。</p>
-<p>His career comprises confidential conspiracy, conspicuous terrorist assaults, Islamic fundamentalist creed and contemptible crimes. But now, most of Laden ’s subordinates contemplated and become contrite, while castigating him with their conscience.
-Three months ago, some conciliatory connoisseurs of international affairs from UN came to Afghanistan(阿富汗) with cordial compassion to the catastrophe occurring there, and consorted Laden. They deem it contingent to arrive at a congruity if Laden would concede. However, Laden was credulous in his counsel’s words that the constellation shows fortune to them.</p>
-<p>他的职业生涯包括秘密阴谋、引人注目的恐怖袭击、伊斯兰原教旨主义信条和可鄙的罪行。但是现在，拉登的大多数下属在用他们的良心谴责他的同时，也在沉思并变得忏悔。  三个月前，一些来自联合国的和解性国际事务行家带着对阿富汗发生的灾难的亲切同情来到了阿富汗，并与拉登进行了交谈。他们认为，如果拉登愿意让步，就有可能达成一致意见。然而，拉登对他的律师的话深信不疑，认为这个星座向他们显示了财富。</p>
-<p>He was covetous and contemptuous of his enemy. Confounded by conceit, he craved for uniting the entire nation. Thus he contemned the UN commission’s advice and convened his troops for counterstrike.
-Soon US corroborated that Laden was the person who contrived the new attack method of impacting skyscrapers with planes, and person who conspired the concerted serial assaults in New York. Laden cowered and constricted his mouth.</p>
-<p>他对他的敌人充满了觊觎和蔑视。他被自负所迷惑，渴望团结整个国家。因此，他不顾联合国委员会的建议，召集他的部队进行反击。  不久，美国证实拉登是设计用飞机撞击摩天大楼的新攻击方法的人，也是策划对纽约进行连续攻击的人。拉登畏缩不前，缩紧了嘴巴。</p>
-<p>He controvert that he was consecrating some food with condiment to the God in order to confine the contagious disease in Afghanistan, and had no time to organize the attack. But US ignored his construing. They said that Laden’s story was concocted and his credential was counterfeited. Then they confiscated it and attacked his troops with bombs that contaminated the whole country.
-Laden confided his congenial officer with composure: “They won’t connive our terrorism, any more than condone us.</p>
-<p>他争辩说，他正在向上帝献上一些带有调味品的食物，以限制阿富汗的传染病，因此没有时间组织攻击。但美国没有理会他的解释。他们说，拉登的故事是编造的，他的证件是伪造的。然后他们没收了他的证件，用炸弹袭击了他的部队，污染了整个国家。  拉登镇定自若地对他的同僚说：&quot;他们不会纵容我们的恐怖主义，更不会宽恕我们。</p>
-<p>We must consolidate the forces, equip them with the counterpart weapons of US army’s, and put compulsive death to those infidels.” “You’re so composed! Let’s conceive something optimistic.” The officer commended.
- (April, 5th)</p>
-<p>我们必须整合部队，用美军的对应武器装备他们，并对那些异教徒进行强制性的杀戮。&quot; &quot;你真够镇定的! 让我们设想一下乐观的事情。&quot; 那位军官称赞道。 (4月5日) </p>
-<h1>Unit 5. Family betrayer</h1>
-<p>第五单元 家庭背叛者 　 　</p>
-<p>Maria was a damsel in a noble family that had passed its culmination and fallen into decadence. She was little defective, for he knew decorum well and was deft at cuisine of desserts.</p>
-<p>玛丽亚是一个贵族家庭的女主人，这个家庭已经过了巅峰期，陷入了颓废。她没有什么缺陷，因为他很懂礼节，对甜点的料理也很灵巧。</p>
-<p>She followed her father’s decree and deferred marriage year after year, her best ages detained.
-One day, Maria’s father designated her as a deputy to dispatch a deleterious man who denounced her family and depicted its defects to others. After she saw the man, he declaimed: “You’re deluded by your culpable father’s deceit. He’s a despicable person who despoiled our property. He derided us and denoted that we should work for him.</p>
-<p>她遵从父亲的命令，年复一年地推迟结婚，她最好的年龄被拘留。  有一天，玛丽亚的父亲指定她为副手，派遣一个谴责她的家庭并向他人描述其缺陷的有害的人。她见到那个人后，他说 &quot;你被你那应受谴责的父亲的欺骗所迷惑。他是一个卑鄙的人，掠夺了我们的财产。他嘲笑我们，说我们应该为他工作。</p>
-<p>I am the delegate of all deceived people. We detest your father in cynical manners and demur to him before the deities. We live in dank cells and feel dazed frequently, but we’re dauntless. We’ll keep deprecating him until he deplore.”
-What the man delineated struck Maria greatly.</p>
-<p>我是所有受骗者的代表。我们以玩世不恭的态度厌恶你的父亲，并在神灵面前对他表示不满。我们住在阴暗的牢房里，经常感到茫然，但我们是无畏的。我们将继续贬低他，直到他贬低为止。&quot;  这个人所描述的内容给玛丽亚带来了极大的震撼。</p>
-<p>Her deference to father detracted, she said in a dejected mood: “I have despised you poor people but now I’m deferential. You’re right in decrying my father’s detriment to you all. He deformed the truth and defrauded me. I’ll curb my cursory task to put you into demise with this deterrent. Also, I’ll detach myself from my family.</p>
-<p>她对父亲的敬意减弱了，她心情沮丧地说道。&quot;我曾经鄙视过你们这些穷人，但现在我却敬而远之。你谴责我父亲对你们所有人的伤害是对的。他歪曲了事实，欺诈了我。我将遏制我的粗略任务，用这种威慑力把你们置于死地。同时，我也会从我的家庭中脱离出来。”</p>
-<p>After some curt compliments, the man said: “Thanks, I’ll go around that declivity and dab the bell dangling on the ceiling as a signal for us to escape.”
-(April, 6th)</p>
-<p> 在一些客气的恭维之后，那人说。&quot;谢谢，我去绕过那个山坡，把悬挂在天花板上的铃铛点燃，作为我们逃跑的信号。&quot; (4月6日) </p>
-<p>&nbsp;</p>
-<h1>Unit 6. The Arrogant Scholar</h1>
-<p>第六单元 傲慢的学者</p>
-<p>Alder is a scholar with many devout disciples. He has been disseminating doctrines that is said to be not having the most diminutive drawback. He economizes his own life and become emaciated. When he came to our city last year, our domineering boss discerned him and invited him to give us a discourse.&quot;</p>
-<p> 阿尔德是一位拥有众多虔诚弟子的学者。他一直在传播据说没有最微不足道的缺点的学说。他节约自己的生命，变得很憔悴。去年他来到我们的城市，我们专横的老板看中了他，邀请他来给我们讲课。
-    
-<p>Alder was eloquent and began dilating with elation: “What I want to elucidate today is a problem which is long distained and has dismayed many people. It distracts them all the time and makes them downcast. That is: How to effectuate the discretion in edifying your disposition? ……” He devised lots of dispensable sentences while eluding the important things, thus digressed the topic and the lecture sounded devoid of sense. What’s more, his dialects greatly disarrayed the audience and dwindled away the effectiveness of his speech.<br>It was getting dusky and began to drizzle.</p></p>
-<p>阿尔德口若悬河，开始欣喜若狂地扩张。&quot;我今天要阐明的是一个长期被忽视的问题，它使许多人感到沮丧。它无时无刻不在分散他们的注意力，使他们垂头丧气。那就是。如何在教育你的性情中实现谨慎？......&quot; 他设计了很多可有可无的句子，却避开了重要的事情，从而偏离了主题，讲座听起来毫无意义。更重要的是，他的方言极大地扰乱了听众的情绪，使他的演讲效果大打折扣。  天色渐渐暗了下来，开始下起了小雨。</p>
-<p>We all became drowsy and our boss’s patience ebbed. He was discreet and didn’t want to disfigure himself by forcing Alder to stop, but he really disparage his speech very much and cannot dissemble any more. Eventually, he said in a devious way: “Your topic is discernible, but it’s so dingy now. Let’s disband the meeting and I’ll disburse your plane ticket back home with discounts.”
-Alder became dismal at once.</p>
-<p>我们都变得昏昏欲睡，我们老板的耐心也随之消退。他很谨慎，不想因为强迫阿尔德停下来而毁了自己的形象，但他真的非常贬低自己的言论，不能再传播了。最终，他以一种狡猾的方式说道。&quot;你的话题是可以辨别的，但现在它是如此的喧宾夺主。我们解散会议吧，我会用折扣支付你回家的飞机票。&quot;  奥尔德一下子变得很沮丧。</p>
-<p>He replied: “Do not dissimulate or disclaim your real purpose. You divulged that your patience have dissipated. Well, if any of you can disprove the topic of my discourse, you can displace me and I’ll go home keep dormant. I’m so ductile.”
-“Stop effusing your words filled with discord,” shouted the boss angrily, “I’ve dissected your topic and it embodies nothing.</p>
-<p>他回答说 &quot;不要掩饰或否认你的真实目的。你说你的耐心已经耗尽了。好吧，如果你们中的任何一个人能够驳倒我的论题，你们可以取代我，我就回家继续休眠。我是如此的有韧性。  &quot;别再胡说八道了，&quot;老板愤怒地喊道，&quot;我已经剖析了你的话题，它没有体现出任何东西。</p>
-<p>Diversify its content, or I’ll efface them. We diverge too much and I have to let you leave, otherwise you’re doing nothing but embezzling our money.”
-(April, 7th)</p>
-<p>使其内容多样化，否则我就抹掉它们。我们的分歧太大，我必须让你离开，否则你除了贪污我们的钱，什么也做不了。&quot; (4月7日)</p>
-<h1>Unit 7. Great Archaeological Discovery</h1>
-<p> 第七单元 考古学大发现  </p>
-<p>An erratic instrument was exhumed from an excavation of ancient epoch. It looked like a pipe but was embroidered exquisite pictures on it, and could still engender a euphonious sound. As nobody in the country can enunciate what it is, an archaeologist with special expertise skill was enlisted from abroad.</p>
-<p>在一次古老时代的发掘中，挖掘出了一个不稳定的仪器。它看起来像一个烟斗，但上面绣着精美的图画，而且还能发出悦耳的声音。由于国内没有人能够说出它是什么，所以从国外征集了一位具有特殊专业技能的考古学家。
-    
-<p>Following the envoy, the expert came to the expedient huts encompassing the spot. During his expeditious esteeming, the expert was completely engrossed. He exclaimed: “This is an exotic flute which is the oldest extant one, and all others have been exterminated in ethnic migrations.” Then he gave an exemplary play with the pipe, followed by extemporaneous expounding to its structure. Eventually, he extolled the importance of this discovery, showing exorbitant etiquette.</p></p>
-<p>在特使的带领下，专家来到了包括该地在内的权宜小屋。在快速的推测过程中，专家完全沉浸在其中。他感叹道。&quot;这是一种异国情调的笛子，是现存最古老的笛子，其他的都在民族迁徙中被消灭了。然后，他以身作则地演奏了这支笛子，接着又对其结构进行了即兴的阐述。最后，他颂扬了这一发现的重要性，展示了极高的礼仪。
-    
-<p>The enrapturing local official held a banquette on the archaeologist’s exodus. However, the instrument’s value enticed the expert and entailed his greed. He emended his plan and wanted to encroach the flute. Thus he exerted his eloquence and equivocated: “Sorry I’ve made a mistake maybe. According to an excerpt from a book enacted by my teacher, this instrument is unworthy.</p></p>
-<p>令人陶醉的当地官员对考古学家的出走举行了宴请。然而，乐器的价值吸引了这位专家，并引起了他的贪欲。他修改了自己的计划，想要侵占这支笛子。因此，他发挥了他的口才，含糊其辞。&quot;对不起，我可能犯了一个错误。根据我的老师制定的一本书的摘录，这个乐器是不值得的。</p>
-<p>Its value cannot emulate a common flute.”
-The official was exasperated: “Nobody will endorse such nonsense excluding yourself. Your crime can be neither extenuated nor exempted. Expedite your steps and eschew us, foolish exponent.”
-The archaeologist was enervated and ran away as soon as possible.</p>
-<p>它的价值不能效仿普通的笛子。&quot;  这位官员被激怒了。&quot;除了你自己，没有人会赞同这样的胡说八道。你的罪行既不能减轻也不能免除。加快你的脚步，避开我们，愚蠢的论者。&quot;  考古学家被激怒了，尽快跑开了。
-    </p>
-<p>(April, 8th)</p>
-<p>(4月8日) </p>
-<h1>Unit 8. The Fox and the Chicken</h1>
-<p>The frigid winter and scarce food supply famish many animals, including a ferocious fox. He is almost forlorn because he has garnered little food when the land was fertile, and the flora is extraneous to his diet. He used to be fussy and extravagant with his food but now has to fetter his stomach and be frugal. “What a formidable winter!” he gabbles.
-Just then his eyes flicker due to a fortuitous discovery.
-第八单元 狐狸和鸡  寒冷的冬天和匮乏的食物供应使许多动物饥肠辘辘，其中包括一只凶猛的狐狸。他几乎感到绝望，因为在土地肥沃的时候，他获得的食物很少，而且植物群对他的饮食来说也是多余的。他以前对食物很挑剔，很奢侈，但现在不得不束缚自己的胃，省吃俭用。&quot;真是个可怕的冬天！&quot;他喃喃自语。  就在这时，他的眼睛因为一个偶然的发现而闪烁了一下。</p>
-<p>After ferreting about the whole grassland fraught of snow for fishy objects, he finally found a small finch with fuzzy feather and fragrant smell. A chicken! “Aha, facile prey!” the fox was exultant, “Hmm…She looks so fatuous and feeble. But I shall not go forthright, because the feud between foxes and chickens will fluster or fret her, and foment her escape. I must make her believe her foe through frauds.”
-After fitful garnishing, the fox comes up to the fluffy fowl with a genial smile on his face.</p>
-<p>他在整个草原上找了半天，终于找到了一只羽毛蓬松、气味芬芳的小雀。一只鸡! &quot;啊哈，轻松的猎物！&quot;狐狸兴奋不已，&quot;嗯......她看起来很肥，很虚弱。但我不会直截了当地去做，因为狐狸和鸡之间的恩怨会让她心慌意乱或焦躁不安，并煽动她逃跑。我必须通过欺诈手段让她相信她的敌人。&quot;  经过适度的修饰，狐狸走到毛茸茸的鸡面前，脸上露出和蔼的笑容。</p>
-<p>He feigned that he is a gentry with genteel speaking genre: “Hey, my fraternal friend! I’m coming to extricate you from a disaster. It’s not facetious. Your nest is too flimsy and frail to be a fixture for living. It cannot foil great gales coming soon. However, I can help building a new nest with many fortes for you, which can forestall water exuding.</p>
-<p>他佯装自己是个有风度的绅士：&quot;嘿，我的兄弟朋友！我是来救你的。我是来把你从灾难中解救出来的。这不是在开玩笑。你的巢穴太脆弱了，不能成为生活的固定场所。它无法抵御即将到来的大风。然而，我可以帮助你建造一个新的巢穴，它有很多优点，可以防止水的渗入。</p>
-<p>I just want to show my genuine feat and won’t extort money from you.”
-“Stop your futile fraudulent figment. It’s such gauche farce.” the chicken flouted, “Look at the frowsy gash on your cheek. You’re the fickle figurehead of the fox clan who just failed in the factious fights.</p>
-<p>我只是想展示我真正的壮举，不会向你敲诈钱财。&quot;  &quot;停止你徒劳的欺诈行为。这是多么高尚的闹剧啊。&quot;那只鸡楞了一下，&quot;看看你脸颊上那道皱巴巴的伤口。你是狐狸一族中善变的人物，刚刚在派系斗争中失败。
-    ”</p>
-<p>The fox cannot gainsay the chicken’s words and left in frenzy frustration.
-(April, 9th)</p>
-<p>&quot;  狐狸无法反驳鸡的话语，在狂热的沮丧中离开。 (4月9日)</p>
-<p>&nbsp;</p>
-<h1>Unit 9. Generation Gap</h1>
-<p> 第九单元 代沟</p>
-<p>Ted made a fortune and hiked back his idyllic home in illustrious guises. He wore a grand hat, a pair of gilded glossy shoes and a girdle with glazed tip. All neighbors in the gorge welcomed Ted with homage instead of grudging, and he was gleeful as well as haughty.
-Yet, Ted’s father, who used to be humane, criticized him bitterly: “How hideous you are! We used to be hardy and hectic.</p>
-<p>泰德发了大财，以显赫的身份徒步回到他的田园诗般的家园。他戴着一顶宏伟的帽子，一双镀金的光面鞋和一条带釉面尖的腰带。峡谷里的所有邻居都以敬意而不是怨恨的态度欢迎泰德，他既欣喜又傲慢。  然而，泰德的父亲，过去很有人情味，却对他进行了严厉的批评。&quot;你是多么的丑陋啊! 我们过去是勤奋的，是忙碌的。</p>
-<p>We’re gregarious and never guileless. Now you made a haphazard fortune and lost our virtues. Hearsay says that you get your money by harrying passengers and hewing trees. Somebody even imparted me that you’ve committed immense homicide. If you’ve done those illicit things, It’s surely ignominious idiosyncrasy, and you’ll lose your imminent heirship if you go on like that.</p>
-<p>我们好聚好散，从不诡诈。现在你发了一笔胡乱的财，却失去了我们的美德。传闻说，你靠骚扰乘客和砍伐树木来赚钱。有人甚至向我透露，你犯了巨大的杀人罪。如果你做了这些非法的事情，那肯定是可耻的特异功能，如果你继续这样下去，你会失去你即将到来的继承权。</p>
-<p>	” He humiliated Ted.
-Ted imbibed some tea, groped his match and ignited a cigar. “You’re too hackneyed and grumpy,” he grumbled in a grouchy voice, “I cannot gratify your obsolete ideology. You old people used to live like ignoble cattle and illegible grasses. You glean grain from fields and heave them back in gratitude to the God.</p>
-<p>&quot; 他羞辱了泰德。  泰德喝了点茶，摸出火柴，点燃了一支雪茄。&quot;你太老套了，脾气也太暴躁了，&quot;他用嗔怪的声音埋怨道，&quot;我不能满足你过时的思想观念。你们这些老人曾经像无知的牛和难以辨认的草一样生活。你们从田地里拾取粮食，然后把它们搬回来以感谢上帝。</p>
-<p>You gnaw dirty food everyday, ignorance of hygiene. All my wealth hinges on my gripping many chances and it’s unreasonable for you to gibe me like that.”</p>
-<p>The hubbub of haggling attracted many neighbors who were heedless at first. Some of them approved the son’s grievance while others took it as heresy. The quarrel’s gist was generation gap.</p>
-<p>你每天啃着肮脏的食物，不懂卫生。我所有的财富都取决于我抓住了许多机会，你这样指责我是不合理的。&quot;  喧闹的讨价还价声吸引了许多邻居，他们起初都不闻不问。他们中的一些人赞同儿子的不满，而另一些人则认为这是异端。这场争吵的主要内容是代沟。
-    
-<p>(April, 10th)</p></p>
-<p>(4月10日)</p>
-<h1>Unit 10. Diplomatic Friction</h1>
-<p> 第十单元 外交摩擦</p>
-<p>A newly inaugurated impervious US submarine with diesel impetus was taking an imperative task near an insular navy base in Japan. As it made its way across the intrinsic flows, an inconceivable fish boat suddenly emerged in front of them. The indolent captain was so imprudent and inert that he turned the steer too late. It was a big submarine with great inertia and the fish boat was in an inept position. It was stricken hard, and the influx of water into the boat’s interior space caused the boat to sink in impotence.</p>
-<p>  一艘新上任的不透水的美国潜艇带着柴油机的动力，在日本的一个岛国海军基地附近执行一项紧急任务。当它穿过固有的水流时，一艘难以想象的鱼船突然出现在他们面前。懒惰的船长是如此轻率和惰性，以至于他转舵太晚。这是一艘具有巨大惯性的大潜艇，鱼船处于无能为力的状态。它被狠狠地撞击了一下，大量的水涌入船的内部空间，导致船无力地沉没。
-    
-<p>The imposing accident incited incisive diplomatic frictions after short interlude. Incensed local fishermen were indignant and impetuous. They incriminated the US navy for insulting their nation. Some of them even instigated local governors with inordinate incentive.<br>A group was set up to inquire the accident.</p></p>
-<p>在短暂的间歇期后，这一令人震惊的事故引发了尖锐的外交摩擦。被激怒的当地渔民愤慨而急躁。他们指责美国海军侮辱了他们的国家。他们中的一些人甚至煽动当地的州长，对其进行过分的刺激。  于是成立了一个小组来调查这次事故。</p>
-<p>After some inquisitive inquiry, they imputed the matter to the fish boat and tried to act as the intermediary to intercede between the fishermen and the US navy. However, the local fishermen were insubordinate and intrepid. Although they’re indigent and make livings on indigenous products, they decided to indict the US navy. Their action gained impassioned support and incessant invocation from the mass people. They hoped the insolent US navy could pay the indemnity.</p>
-<p>经过一番询问，他们将此事归咎于鱼船，并试图充当中间人，在渔民和美国海军之间进行斡旋。然而，当地的渔民是不服从的，也是无畏的。虽然他们是穷人，靠本地产品为生，但他们决定起诉美国海军。他们的行动得到了广大人民群众的热情支持和不断的呼唤。他们希望无礼的美国海军能够支付赔偿金。
-    
-<p>The impassive governors, however, feared being implicated in the trouble. They intimidated the fishermen by instilling that, the US navy had innate privileges, and insinuated that their inflexible indictment was ineligible. But the fishermen were indomitable and inverted the infusing. The lawsuit began eventually.<br>All the crew of the submarine was interrogated.</p></p>
-<p>然而，无动于衷的总督们害怕被牵连到麻烦中。他们通过灌输美国海军有天生的特权来恐吓渔民，并暗示他们不灵活的起诉是不合格的。但渔民们不屈不挠，颠覆了这种灌输。诉讼最终开始了。  潜艇上的所有船员都被审问了。</p>
-<p>Finally all the incredulity dissipated: the intrinsic fault lay in the captain’s incipient operation error. Although almost impeccable in the past, there’s no impunity for him. When the indented judgment text was announced, the fisherman improvised an impromptu verse to mock the government’s improvident waste of time.
-(April, 11th)</p>
-<p>最后，所有的难以置信都消散了：内在的错误在于船长的操作错误的萌芽。虽然过去几乎无懈可击，但对他来说，没有什么可以逃避的。当缩进的判决文本被宣布时，渔民即兴创作了一首诗，嘲笑政府的不负责任的浪费时间。 (4月11日) </p>
-<p>&nbsp;</p>
-<h1>Unit 11. Story on the Lawn</h1>
-<p>第十一单元 草地上的故事 　 　 　 　</p>
-<p>　 　At 40°latitude, 110°longitude there was a large area of luxuriant lawn. A river meandered through the grassland, manuring it with fresh water.</p>
-<p>在纬度40度，经度110度，有一大片茂盛的草坪。一条河流蜿蜒穿过草地，用淡水灌溉它。</p>
-<p>A liberal girl lived there, whose merits was her matchless beauty and irreproachable ken. Her hair was lithe and her eyes limpid. Every morning she would wear her laurel and lash her sheep onto the lawn. The mediocre life elapsed in lull for many, many years.
-One day an itinerant nobleman came to the lawn.</p>
-<p>那里住着一个自由的女孩，她的优点是无以伦比的美丽和无可指责的能力。她的头发很轻盈，眼睛很清澈。每天早上，她都会戴着桂冠，把羊群拴在草坪上。平庸的生活在冷清中度过了很多很多年。  有一天，一位流动的贵族来到草坪上。</p>
-<p>He was authorized by an irrevocable legislation to levy the place. He had malady in his leg and had to limp all the time, and all people jeered at his jolting languid muscle when he came. Some children’s malicious mimicry to his walking manner greatly irritated him.
-As he saw the girl, his eyes were filled with luster and his lust arose: “Aha, a menial meek girl with fine malleable skin! She reminds me of my newly-marital life.”
-Full of malice, he kindled a cigar and accosted the girl: “You’re such a methodical girl with manifold talents.</p>
-<p>他被一项不可撤销的立法授权征收这个地方。他的腿有病，不得不一直跛行，所有的人都嘲笑他来时颠簸的慵懒的肌肉。一些孩子对他走路方式的恶意模仿让他非常恼火。  当他看到这个女孩时，他的眼睛充满了光泽，他的欲望也随之而来。&quot;啊哈，一个温顺的女孩，皮肤很好，可塑性强！她让我想起了我的新女友。她让我想起了我的新婚生活&quot;。  他满怀恶意，点燃了一支雪茄，向女孩搭讪。&quot;你真是个有条不紊的女孩，有多方面的才能。</p>
-<p>I’ve learned of a maxim saying that, phoenix cannot reside on a small tree, and I can liberate you from the leash of husbandry. You should lease your sheep to others and go with me to the maritime capital city whose prosperity is lauded by all.”
-The girl was not at all irresolute. She replied in listless tone: “Look at the irreverent smile on your face and the ugly ledge on your leg. By meticulous observation, I loathe you.</p>
-<p>我知道有句格言说，凤凰不能住在小树上，我可以把你从畜牧业的束缚中解放出来。你应该把你的羊群租给别人，和我一起去那座人人称赞的繁荣的海上都城。&quot;  姑娘一点也不犹豫。她用无精打采的语气回答。&quot;看看你脸上那不敬的笑容和你腿上那丑陋的窗台。通过细致的观察，我厌恶你。</p>
-<p>Your maneuver cannot jumble my mind and languish my alert.”
-“Maligning!” shouted the nobleman.
-After some liaison, many lusty malcontents came to the girl and drove the nobleman away.
-(April, 12th)</p>
-<p>你的演习不能使我的思想混乱，使我的警惕性下降。&quot;  &quot;恶毒！&quot;贵族喊道。  经过一番联络，许多好色的恶人来到女孩身边，将贵族赶走。 (4月12日) </p>
-<p>&nbsp;</p>
-<h1>Unit 12. The General Election</h1>
-<p>第十二单元 大选  </p>
-<p>The quadrennial US president election is once again muddling the multitude. Parades with partisan motif fill the streets and obstruct the traffic.</p>
-<p>四年一度的美国总统选举再次让众人浑然不知。以党派为主题的游行队伍挤满了街道，阻碍了交通。</p>
-<p>Nocturnal TV programs are monotonous due to the noxious orations. Both parties have gained tremendous patronage from the opulence of large businesses. It’s no wonder the greatest ordeal to those politicians.
-The Democratic Party’s candidate, Gore, is an outspoken and overbearing man with obstinate thoughts nurtured in a needy family. He gives an offhand comment that the Republic Party’s candidate, Bush, is a moron with morbid brain.</p>
-<p>夜晚的电视节目由于有毒的演说而变得单调。两党都从大企业的富足中获得了巨大的赞助。这也难怪对那些政治家来说是最大的折磨。  民主党的候选人戈尔是一个直言不讳、盛气凌人的人，他的顽固思想是在一个贫困的家庭中培养出来的。他随口说了一句，共和党的候选人布什是个脑子有病的白痴。</p>
-<p>He outwitted the public that, if he wins, he would modulate the policies, popularize obligatory education and mollify the current economic depression.
-Bush, although overdue for the election, is a munificent person with nimble style in his outfits. He obscures his own flaws and evades Gore’s onsets. Instead, he frequently mentioned the former president Clinton’s obscene history. “I’m not the panacea for all problems, but I can be palatable small dish for you to nibble.</p>
-<p>他欺骗公众说，如果他赢了，他将调控政策，普及义务教育，调和当前的经济萧条。  布什虽然已经过了选举期，但他的衣着打扮却有着灵活的风格，是个富丽堂皇的人。他掩盖了自己的缺陷，回避了戈尔的论调。相反，他经常提到前总统克林顿的淫秽历史。&quot;我不是解决所有问题的灵丹妙药，但我可以成为适口的小菜，供你们啃。</p>
-<p>Oust Gore from your tickets and support me please. Our serious security conditions can be mitigated.” Bush paraphrases his ideas.
-As Gore overlooks many chances and fails to mold his aspect successfully, his negligence finally causes Bush’s victory. According to the pact between them, Bush sets up his government and begins to nominate his ministers.</p>
-<p>请把戈尔从你的票上赶走，支持我。我们严重的安全状况是可以缓解的&quot;。布什转述了他的想法。  由于戈尔忽略了许多机会，没有成功地塑造他的方面，他的疏忽最终导致了布什的胜利。根据他们之间的约定，布什成立了他的政府，并开始提名他的部长。
-    
-<p>(April, 13th)</p></p>
-<p>(4月13日) </p>
-<p>&nbsp;</p>
-<h1>Unit 13. Mahatma Gandhi</h1>
-<p>第十三单元 圣雄甘地</p>
-<p>Gandhi was the peerless precursor of India national independence movement as well as a provident politician with prodigious probity. Grown up in penury, he was a pious posterity of the Indian people and had no prodigal penchants.
-Fighting for the perennial independence of India, Gandhi is propped by many followers. He told them to keep placid and proscribed violence which may pervert people, for he knew profoundly, if that prevails, their prestige would be profaned and the movement would fall in plight. As a result, he kept placating his followers by plotting petitions with percussions and pleaded with the British colonists with propriety to accept their plausible proposals.</p>
-<p>  甘地是印度民族独立运动的无敌先驱，也是一位具有惊人清廉的政治家。他在贫穷中长大，是印度人民虔诚的后裔，没有浪得虚名的嗜好。  为印度的常年独立而战，甘地被许多追随者所拥护。他告诉他们要保持平和，禁止可能使人变态的暴力，因为他深刻地知道，如果这种情况盛行，他们的威信将被亵渎，运动将陷入困境。因此，他不断安抚他的追随者，用打击乐器策划请愿，并以适当的方式恳求英国殖民者接受他们的合理建议。</p>
-<p>Local governors professed his process permissible, and his minions proliferated.
-As Gandhi’s propensity to become independent protruded and his profuse methods of struggle protracted, the colonists were prodded and pensive. They fear that the poise would be broken and fights would pervade. So they prosecuted Gandhi for pilferage of poultries and plunged the plaintiff into the penal jail. The jail keeper was prone to sympathy and made special food provision for Gandhi by pecking the jail wall.</p>
-<p>当地总督宣称他的过程是可允许的，他的爪牙也在不断增加。  随着甘地的独立倾向的凸显和他大量的斗争方法的延长，殖民者们被催促和沉思。他们担心姿态会被打破，争斗会弥漫开来。于是，他们以偷窃家禽的罪名起诉甘地，并将原告关进了刑事监狱。狱卒容易产生同情心，通过啄食监狱的墙壁为甘地提供了特殊的食物。</p>
-<p>Their precious proximity was not perpetuated. Soon the keeper was precluded from touching Gandhi and Gandhi lost his preference.
-A prolific playwright wrote a play about Gandhi with pertinent topic recently. In the prelude of the play he premised that Gandhi was still alive. When the play was on, it precipitated and the perspective of the city’s profile became picturesque.</p>
-<p>他们宝贵的亲密关系没有得到延续。不久，看守人被排除在接触甘地之外，甘地也失去了他的喜好。  最近，一位多产的剧作家写了一部关于甘地的戏剧，主题很贴切。在该剧的前奏中，他预设了甘地仍然活着。当戏剧开始时，它沉淀下来，城市轮廓的视角变得如画。
-    
-<p>(April, 14th)</p></p>
-<p>(四月十四日) </p>
-<p>&nbsp;</p>
-<h1>Unit 14. The Lord and the Hermit</h1>
-<p>第十四单元 主人与隐士</p>
-<p>&nbsp;</p>
-<p>Once upon a time there was a rapacious lord. He was relentless to his tenants and quelled them by placing quotas to their living condition. Soon he collected quantitatively great revenue and lived in a radiate palace. He was also renowned for his queer clothes.
-One day the lord’s disease relapsed, so he rallied his subordinates for help.</p>
-<p>  很久以前，有一个贪婪的领主。他对他的佃户毫不留情，并对他们的生活条件设置了配额，以此来镇压他们。很快，他就收集了大量的收入，并住在一个宽敞的宫殿里。他还因其怪异的衣服而闻名。  有一天，领主的病复发了，于是他召集他的部下寻求帮助。
-One of them said: “I’ve heard of a recluse who knows regimen well residing nearby. Why not visit his residence for help?” Another retorted: “Be prudent, maybe it is only a rumor.” But the rash lord was filled with rapture and ratified the visiting plan.
-On the next Sunday, the lord purged himself, held a quaint rite and started for the hermit’s home. They passed rugged rustic passages full of paddles and the lord almost recoiled.</p>
-<p>其中一个人说。&quot;我听说附近住着一个很懂养生的隐士。为什么不去他家寻求帮助呢？&quot; 另一个人反驳说。&quot;谨慎点，也许这只是一个谣言。&quot; 但这位鲁莽的领主充满了狂喜，批准了访问计划。  在下一个星期天，领主清洗了自己，举行了一个古朴的仪式，然后开始前往隐士的家。他们经过崎岖不平的乡间小道，上面摆满了划子，老爷几乎要退缩了。</p>
-<p>Finally they arrived. The lord felt disappointed at the recluse’s reception, but he wouldn’t relinquish the chance and talked to the hermit with reverence.
-The hermit ruminated and reverted to the main topic in a pungent voice: “I’ve heard lots of your ravenous deeds. You retract the land you’ve distributed to the farmers and order them to redeem their land. You must redress your guilt and rehabilitate their freedom.</p>
-<p>他们终于到了。主人对隐士的接待感到失望，但他不会放弃这个机会，带着敬意与隐士交谈。  隐士反思了一下，用辛辣的声音回到了正题：&quot;我已经听说了很多你的贪婪行为。你收回你分给农民的土地，命令他们赎回他们的土地。你必须纠正你的罪过，恢复他们的自由。</p>
-<p>Reimburse their respective debts and build refuge for them. You can retain the residue of your property.”
-The lord was reluctant to renounce his wealth and be rent from his palace. He rebuked: “Your advice is too reckless. I’m resolute not to accept it.</p>
-<p>偿还他们各自的债务，为他们建立避难所。你可以保留你的剩余财产。&quot;  领主不愿意放弃他的财富和被租出他的宫殿。他斥责道。&quot;你的建议太鲁莽了。我坚决不接受它。”</p>
-<p>“Why so repulsive? You cannot repudiate my words.” The hermit reiterated his suggestion and its resonance echoed. “Remit their taxes with rebates, or a riot is imminent.”
-The lord again refuted. At last he went back in remorse.</p>
-<p>&quot;  &quot;为什么如此排斥？你不能否定我的话。&quot; 隐士重申了他的建议，其共鸣得到了回应。&quot;把他们的税款连同回扣一起交出来，否则暴乱就会发生。&quot;  领主再次反驳。最后，他懊悔地回去了。
-    
-<p>(April, 15th)</p></p>
-<p>(4月15日)</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h1>Unit 15. Watching the Execution</h1>
-<p>It is reported that two seer criminals were to be executed in the town center today, and spontaneous spectators have gathered around the sedate square in sporadic groups fore fear of solitude. They skimmed the sardonic slogans pasted on the walls about those social slags. The air was solemn and sensuous.
-Soon several policemen came from the stall as speculated, shoving two criminals saddled by shackles. As they walked around the sloppy slope, people shunned them because they’re thought to be sinister.</p>
-<p> 第十五分队观看处决  据报道，今天将在镇中心处决两名预言家罪犯，自发的观众们已经零星地聚集在沉静的广场周围，因为害怕孤独。他们撇了撇嘴，看了看墙上粘贴的关于那些社会渣滓的讽刺性标语。空气中弥漫着庄重而感性的气息。  很快，几个警察就像猜测的那样从摊位上走来，推搡着两个戴着镣铐的犯罪分子。当他们在邋遢的斜坡上行走时，人们避开他们，因为他们被认为是阴险的。</p>
-<p>Then the executioner began to scrutinize the criminals that had been kept in seclusion for days, his face steadfast and his rifle shined with splendor.
-The first criminal was a murderer who had smothered a boy. The police was not sluggish at all and pushed him forward without scruple. As the executioner drew his sword and it slumped, the criminal’s neck snapped, and his head was severed from the body. Blood spouted from the gush and sprayed onto the ground.</p>
-<p>然后，刽子手开始仔细检查那些被关了好几天的罪犯，他的脸色坚毅，他的步枪闪耀着光辉。  第一个罪犯是一个谋杀犯，他闷死了一个男孩。警察一点也不迟疑，毫无顾忌地把他推到前面。当刽子手拔出他的剑，剑身倾斜时，罪犯的脖子断了，他的头被从身体上割下来。鲜血从涌出，喷洒在地上。</p>
-<p>Some watchers’ clothes were smeared and spewed at the terrible scene. The executioner sheathed his sword and shouted: “Next one.”
-The second was a sly cheater who obtained $100,000 through one solitary method. He solicited: “I fear the savor of sword. Kill me with a rifle, please.</p>
-<p>一些观看者的衣服被弄脏了，在这可怕的场面中被喷了出来。刽子手收起了他的剑，喊道。&quot;下一个&quot;。  第二个人是一个狡猾的骗子，他通过一个单独的方法获得了100,000美元。他请求说 &quot;我害怕剑的味道。请用步枪杀了我吧。</p>
-<p>	” “No, it squanders bullets.” Replied the executioner with sarcasm. “You’re too skimpy,” said the criminal in a satirical tone, “please satiate my last will.” After some squabbling he was satisfied.
-The executioner fired at the criminal’s spleen.</p>
-<p>&quot; &quot;不，它浪费了子弹。&quot; 刽子手讽刺地回答说。&quot;你太吝啬了，&quot;罪犯用讽刺的语气说，&quot;请满足我的遗愿。&quot; 经过一番争吵，他满意了。  刽子手向罪犯的脾脏开枪。</p>
-<p>Blood spurted out, like sprouting flower. The criminal was still sober and felt seared. The bullet singed his body and killed him without much snag.
-The police then gave the spectators lots of sermon but nobody listened. I collected a bullet shell and scooped some blood sediment up from the ground as a souvenir, then returned home without sojourn.</p>
-<p>鲜血喷涌而出，像发芽的花朵。罪犯还很清醒，感觉到了血腥。子弹射中了他的身体，没有什么悬念地杀死了他。  警察随后给观众讲了很多道理，但没有人听进去。我收集了一个子弹壳，并从地上舀了一些血迹作为纪念，然后就回家了，没有逗留。
-    
-<p>(April, 16th)</p></p>
-<p>(4月16日) </p>
-<p>&nbsp;</p>
-<h1>Unit 16. Misery of the Negro Slaves</h1>
-<p>第十六单元 黑人奴隶的苦难 </p>
-<p>400 years ago, many European colonists with supple hair went to Africa and subverted the aboriginal empires. After the subjection, local residents succumbed to the colonists. The conquerors found them stocky and submissive. They surmised that those tangible traits made them suitable for strenuous work. So they shipped those Negroes to America in order to supersede animal labor.</p>
-<p> 400年前，许多头发柔顺的欧洲殖民者前往非洲，颠覆了原住民帝国。征服之后，当地居民向殖民者屈服。征服者发现他们身材魁梧、顺从。他们推测，这些有形的特征使他们适合从事繁重的工作。所以他们把这些黑人运到美国，以取代动物劳动。
-    
-<p>During the 1600s, from African plains to the summits, millions of Negroes tallying the requirements were tied together with strap. Their noses were transfixed and their faces tinted. Then they were jammed into stout ships teeming slaves thrust by sails and shipped to America. While in the ship, they fed on tepid tenuous porridge and stodgy corn. Stripped of all things, their head thumped the deck and their noses tingled while the ship waved.</p></p>
-<p>在16世纪，从非洲平原到山顶，数以百万计的黑人在统计要求时被用皮带绑在一起。他们的鼻子被绑住，脸被染上颜色。然后，他们被塞进装满奴隶的坚固船只，被船帆推着运往美国。在船上时，他们以不温不火的稀粥和呆板的玉米为食。他们被剥夺了所有的东西，他们的头在甲板上砰砰作响，他们的鼻子在船的摇晃下刺痛。</p>
-<p>Such bad conditions were not tentative, so they became torpid and tranquil as well as susceptible. Surplus people were thrown into the sea and were submerged by water. As the slavers kept tantalizing them, Even the most temperate man became sullen. Their touchy temperament caused much strife and many ships strayed.
-After they finally surmounted all the difficulties stunting them and subsisted until they reached America, they found themselves suffusing the slaver’s farms to which they were subsidiary.</p>
-<p>这样恶劣的条件下，他们没有试探性，所以他们变得麻木不仁，安分守己，也很容易受到影响。多余的人被扔进海里，被水淹没了。由于奴隶主不断挑逗他们，即使是最有脾气的人也变得闷闷不乐。他们易怒的性情引起了许多纷争，许多船只迷失了方向。  在他们最终克服了所有阻碍他们的困难，并在到达美洲之前维持生计之后，他们发现自己在奴隶主的农场里充斥着他们的附属品。</p>
-<p>Their stingy superintendents stipulated with them that, their job was temporal and would soon be supplanted by more succinct work. It’s their tact however. Everyday they ate their sustenance when the bell tolled. It was tacit in the synopsis of the contact that they can never be free. Their thrift and torment transcended all that in human history.</p>
-<p>他们吝啬的主管对他们规定，他们的工作是暂时的，很快会被更简洁的工作所取代。但这是他们的策略。每天，当钟声响起时，他们就会吃上自己的养料。在接触的梗概中默示，他们永远不可能获得自由。他们的节俭和煎熬超越了人类历史上的一切。
-    
-<p>When their deeds transpired, the colonists’ reputation got tarnished. International organizations sublimated the topic of fighting against slavery and began to tackle the problem.<br>(April, 17th)</p></p>
-<h1>Unit 17. The Perilous Journal</h1>
-<p>Common tourists virtually never go upstream the Amazon River too far. I’ve been venerating those valiant adventurers as well as wistful and longing to become one, until last year, I joined a group of archaeologists who were trying to unearth archaic vestiges, such as wares polished with varnish, from a site deep in the rainforests.
-Several trotting mules tugged our boat.</p>
-<p>当他们的事迹发生后，殖民者的声誉受到了损害。国际组织升华了反对奴隶制的主题，并开始解决这个问题。 (4月17日) 第十七单元 险恶的日记  普通游客几乎从未在亚马逊河的上游走过太远。我一直在崇敬那些英勇的冒险家，同时也怀念和渴望成为他们中的一员，直到去年，我加入了一个考古学家小组，他们试图从雨林深处的一个遗址中发掘出古代遗迹，比如用清漆打磨的器物。  几头小跑的骡子拖着我们的船。</p>
-<p>Our leader, Jimmy, was an upright, witty man with unshaken will. He wielded the steer warily and kept vigilant. The water trickling underneath our boat formed trifling waves. The uncanny scenes and unruly animals on the banks aroused our whims.
-It was dawn and everything around was vague.</p>
-<p>我们的领袖，吉米，是一个正直、机智的人，有着坚定不移的意志。他小心翼翼地挥舞着方向盘，保持着警惕。我们船下的水滴形成了微不足道的波浪。岸边不可思议的景象和不守规矩的动物激起了我们的奇思妙想。  天亮了，周围的一切都很模糊。</p>
-<p>Suddenly the boat was wagged sharply and we woke up in turmoil. There was a huge whirlpool ahead, which generated vehement vibration. As we waddled toward Jimmy, he veered the boat with not a whit of hurry until we escaped the turbulent area.
-Still in trepidation, we got onto the bank and launched a campfire with twigs. We took off the wet clothes and wrung them out, then dried them on the fire through ventilation.</p>
-<p>突然间，船被急剧摇晃，我们在动荡中醒来。前面有一个巨大的漩涡，产生了剧烈的震动。当我们蹒跚着走向吉米时，他不慌不忙地将船转向，直到我们逃离了动荡的区域。  我们仍然战战兢兢，上了岸，用树枝生起了篝火。我们脱下湿衣服，把它们拧干，然后通过通风把它们在火上烤干。</p>
-<p>I made a wry smile because I was wearing an unbecoming coat in vogue. We then composed a verse to praise Jimmy’s wit and valor.
-As the incident vexed us, our faith wavered and our courage waned. Somebody tried to wheedle Jimmy into aborting the adventure, but Jimmy vetoed the suggestion. “Unless unanimity, I won’t agree with such unseemly advice.</p>
-<p>我做了一个狡猾的微笑，因为我穿着一件不符合潮流的外套。然后我们作了一首诗来赞美吉米的机智和勇敢。  随着这件事的困扰，我们的信念动摇了，勇气减弱了。有人试图劝说吉米放弃这次冒险，但吉米否决了这个建议。&quot;除非众口一词，否则我不会同意这种不体面的建议。
-He vindicated his decision.他平反了自己的决定。
-    </p>
-</body>
-</html>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E9%9B%85%E6%80%9D1000%E8%AF%8D/2023/01/29/" data-id="clnn8fjew0041e0u53u0u68bt" data-title="雅思1000词" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Economist/" rel="tag">Economist</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-目录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E7%9B%AE%E5%BD%95/2023/01/22/" class="article-date">
-  <time class="dt-published" datetime="2023-01-22T07:36:39.000Z" itemprop="datePublished">2023-01-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E7%9B%AE%E5%BD%95/2023/01/22/">目录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <ul>
-<li><h6><a target="_blank" rel="noopener" href="https://p6dtzvj9mj.feishu.cn/docx/OlWSd07y3oNlkhxn9VWcreKNnVf?from=from_copylink">书籍01：银河帝国1.基地</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a target="_blank" rel="noopener" href="https://p6dtzvj9mj.feishu.cn/docx/EnV7dAypro2PcFxLK8ac4Sn3nRh?from=from_copylink">书籍02：哈利波特</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a target="_blank" rel="noopener" href="https://xiaofan.netlify.app/mu-cai-de-shang-ye-hua/">01.木材的商业化</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/sheng-ming-de-yuan-su">02.生命的元素</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/bei-mei-ju-xing-dong-wu-de-guo-du-sha-lu/">03.北美巨型动物的过度杀戮</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/xing-xing-zhi-si/">04.星星之死</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-
-
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/ba-xi-du-li-de-cheng-jiu/">05.巴西独立的成就</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/mei-guo-de-tie-lu/">06.美国的铁路</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/shi-jiu-shi-ji-ou-zhou-de-ren-kou-zeng-chang-qing-kuang/">07.十九世纪欧洲的人口增长情况</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/jin-xing-he-di-qiu-shang-de-biao-mian-ye-ti/">08.金星和地球上的表面液体</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/meng-fei-si-lian-he-ai-ji-de-di-yi-ge-shou-du/">09.孟菲斯：联合埃及的第一个首都</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/na-tu-fei-ya-ren-de-wen-hua/">10.纳图菲亚人的文化</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/he-liu-chen-ji-wu/">11.河流沉积物</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/jiu-shi-qi-shi-dai-de-dong-xue-bi-hua/">12.旧石器时代的洞穴壁画</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/yu-lin-de-tu-rang/">13.雨林的土壤</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/zui-zao-de-wen-zi-zheng-ju">14.最早的文字证据</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-<ul>
-<li><h6><a href=" https://xiaofan.netlify.app/zui-zao-de-wen-zi-zheng-ju">未完待续...</a></h6><h6></h6>
-</li>
-</ul>
-<p>&nbsp;</p>
-
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E7%9B%AE%E5%BD%95/2023/01/22/" data-id="clnn8fina001ce0u5dx68d371" data-title="目录" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-夜雨" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E5%A4%9C%E9%9B%A8/2023/01/17/" class="article-date">
-  <time class="dt-published" datetime="2023-01-17T13:27:00.000Z" itemprop="datePublished">2023-01-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E5%A4%9C%E9%9B%A8/2023/01/17/">夜雨</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>已经到了秋夜<br>满地枯黄落叶<br>你的身影徘徊在我世界<br>寻觅却不在视野</p>
-<p>走过无人巷街<br>雨滴逐渐猛烈<br>我的回忆触碰到你笑靥<br>故事却为何止歇</p>
-<p>眼中的你曾沐浴月光<br>深夜的雨巷我偶然回想<br>撑伞遇到娉婷的模样<br>是谁悄然带走这期望</p>
-<p>梦里的你曾醉心花香<br>夜巷深雨中记忆都渺茫<br>如若能与你重逢一场<br>是谁翩然笑意也飞扬</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E5%A4%9C%E9%9B%A8/2023/01/17/" data-id="clnn8fjh5005be0u530czbj0q" data-title="夜雨" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-夜见流星" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E5%A4%9C%E8%A7%81%E6%B5%81%E6%98%9F/2023/01/11/" class="article-date">
-  <time class="dt-published" datetime="2023-01-11T11:48:28.000Z" itemprop="datePublished">2023-01-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E5%A4%9C%E8%A7%81%E6%B5%81%E6%98%9F/2023/01/11/">夜见流星</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>每一颗黯然坠落的星辰<br>都诉说着关于自己的真相<br>而舞台上的表演者眉飞色舞<br>是露馅之前的努力伪装</p>
-<p>我坐听烟花爆竹不停地响<br>送别无辜的陌生的人去天堂<br>某天中午的唢呐吹半晌<br>离开了人间的四季与月光</p>
-<p>凝滞的心沉默没多讲<br>渐渐到了午夜的走廊<br>回忆里鲜艳的是人们笑语欢唱<br>如今呜咽写挽联两行</p>
-<p>如果年轻必然面目苍苍<br>谁记得你旧年的梦想<br>等百代后新人都遗忘<br>生生灭灭有什么荣光</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E5%A4%9C%E8%A7%81%E6%B5%81%E6%98%9F/2023/01/11/" data-id="clnn8fjh40059e0u5gl0q5jly" data-title="夜见流星" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-屋檐" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E5%B1%8B%E6%AA%90/2022/12/24/" class="article-date">
-  <time class="dt-published" datetime="2022-12-24T11:47:30.000Z" itemprop="datePublished">2022-12-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E5%B1%8B%E6%AA%90/2022/12/24/">屋檐</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>夏雨连绵不绝，你无伞可撑，与我徘徊在屋檐下等候。你的睫毛沾染些许飞溅的雨雾，在我面前，正是巧笑嫣然。</p>
-<p>凝眸不语的光阴里，前尘往事在我脑海闪过，而我却从没有问你是否记得。无端的遇见，无故的消散，没有缘由的记住与忘记，我参不透其中的必然性。</p>
-<p>淋过一场有你的夏雨，于是各自飘散在人海，奔赴各自的悲欢忧乐，像是、不曾围绕过彼此一样。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E5%B1%8B%E6%AA%90/2022/12/24/" data-id="clnn8fjd80038e0u5gv449u6x" data-title="屋檐" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-明镜照心" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/%E6%98%8E%E9%95%9C%E7%85%A7%E5%BF%83/2022/12/21/" class="article-date">
-  <time class="dt-published" datetime="2022-12-21T11:46:39.000Z" itemprop="datePublished">2022-12-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/%E6%98%8E%E9%95%9C%E7%85%A7%E5%BF%83/2022/12/21/">明镜照心</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>尘埃拂拭 明镜生光彩<br>巍峨宫殿焚于项羽的火把<br>嬴政雕刻 国玺传儿孙<br>孟姜女的夫婿埋到城墙里</p>
-<p>听万众赞叹 千篇一律<br>自缚手脚作牛羊<br>赏天下珍宝 流光溢彩<br>忽然问君何不食肉糜</p>
-<p>绝顶智谋 锱铢必较<br>无量贤徳称赞是君子<br>敢爱敢恨 实话实说<br>丑态百出反而成小人</p>
-<p>明镜照得暗夜的鬼魅<br>却照不亮变色的人心<br>而灰烬无法再次燃烧<br>除非毒蛇放弃对你噬咬</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fan4love.github.io/%E6%98%8E%E9%95%9C%E7%85%A7%E5%BF%83/2022/12/21/" data-id="clnn8fin50013e0u5h1zz6r1p" data-title="明镜照心" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-  </nav>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Economist/" rel="tag">Economist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E6%91%98/" rel="tag">书摘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%97/" rel="tag">小诗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%8C%E8%AF%8D/" rel="tag">歌词</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Economist/" style="font-size: 20px;">Economist</a> <a href="/tags/Python/" style="font-size: 11.67px;">Python</a> <a href="/tags/%E4%B9%A6%E6%91%98/" style="font-size: 10px;">书摘</a> <a href="/tags/%E5%B0%8F%E8%AF%97/" style="font-size: 18.33px;">小诗</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 13.33px;">日记</a> <a href="/tags/%E6%AD%8C%E8%AF%8D/" style="font-size: 15px;">歌词</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 16.67px;">碎碎念</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/01/">January 2005</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/hello-world/2023/10/12/">Hello World</a>
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
           </li>
+          
         
-          <li>
-            <a href="/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/2023/10/12/">我的第一篇</a>
-          </li>
         
-          <li>
-            <a href="/%E5%BE%88%E5%A5%BD/2023/10/12/">很好</a>
-          </li>
-        
-          <li>
-            <a href="/%E6%88%91%E5%9C%A8%E6%B5%8B%E8%AF%95/2023/10/11/">我在测试</a>
-          </li>
-        
-          <li>
-            <a href="/%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95/2023/10/10/">最新进展</a>
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
     </div>
   </div>
+</nav>
 
   
-</aside>
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
+          
+        </div>
+
         
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
       
-      &copy; 2023 x<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
     </div>
   </div>
-</footer>
+</div>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E7%84%B0%E7%81%AB/2023/02/27/" target="_self">
+          焰火
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E7%84%B0%E7%81%AB/2023/02/27/" target="_self">
+        <div>
+          邻国大军压境，有谣言第一公民已经逃命，年轻情侣在故土难离，却要抵御撒旦的偷袭。 鲜花飘洒在废墟，教堂的神父为二人见证，前线的路途并肩走过，护卫尊严与自我。 而你在我的身旁缠绕着，像斑斓的焰火，像迷人的情歌。 在你我头顶掠过的炮火，是冬日的冷漠，是将近的胜果。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-02-27 20:47" pubdate>
+              2023-02-27
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E8%9A%81%E4%BA%BA/2023/02/25/" target="_self">
+          蚁人
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E8%9A%81%E4%BA%BA/2023/02/25/" target="_self">
+        <div>
+          剜开土壤深处的蚁穴是工蚁踉跄的步伐曲曲折折的通道三维空间尽情延伸 在地面搭建了土丘暴雨以后的洞口毫无意识的劳作繁衍生息两亿年 地震或是小行星恐龙灭绝在史前蚂蚁不会哭或笑是好是坏如何论定？ 剜开蚁穴的深处，蚁后身旁的新生儿，想必夏日都成熟，奔波不知何为乐趣。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-02-25 23:20" pubdate>
+              2023-02-25
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%B5%AE%E7%94%9F%E8%8B%A5%E6%A2%A6/2023/02/13/" target="_self">
+          浮生若梦
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%B5%AE%E7%94%9F%E8%8B%A5%E6%A2%A6/2023/02/13/" target="_self">
+        <div>
+          曾在黎明 独行林中的小径偶然见你眼睛落花飞舞盘旋在我心身边有你的影 你的步履轻轻盈盈梦幻的精灵愿化作阳光与你相拥是穿梭绿叶的晴明 林中你 清泉意在我视线半悬停玫瑰却黯然一瞬间就凋零 常见锦衣皓月之下所爱隔丘陵任鱼游千里为我送达信中情 总知白驹逃所念恰似飞星寒枝拣尽 风沙吹散乘舟漂流随晨晚 浮生清欢 易作云烟日出潮落年复年净心无言 雪山风寒玫瑰心头绽 一梦间
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-02-13 17:44" pubdate>
+              2023-02-13
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%AD%8C%E8%AF%8D/">#歌词</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%99%A8%E6%99%9A%E4%B9%8B%E9%A3%8E/2023/01/30/" target="_self">
+          晨晚之风
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%99%A8%E6%99%9A%E4%B9%8B%E9%A3%8E/2023/01/30/" target="_self">
+        <div>
+          旧的我在扉页写下日期凛冽晨风 尚是冬季迎着新年的风 体味寒意奔走多少公里 热切寻觅 讯号借助互联网的蛛丝捕捉你的回应像是盲目的漂流瓶水上海里 颠簸流离  新的我在书页取出枯花温热晚风 曾是夏季听着耳畔的风 体验惊喜辗转多少日夜 点点滴滴 雨的自由是落入土地亦是蒸腾 飞到天际我的自由是久候柳堤亦是离场 星河游弋
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-30 19:50" pubdate>
+              2023-01-30
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E9%9B%85%E6%80%9D1000%E8%AF%8D/2023/01/29/" target="_self">
+          雅思1000词
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E9%9B%85%E6%80%9D1000%E8%AF%8D/2023/01/29/" target="_self">
+        <div>
+          雅思1000词 Unit 1. The Abduction 第一单元 绑架 An adage says that adversity is transient. The following allegory is an example. Long, long ago there were two couples that had no children. They adopted a boy
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-29 13:10" pubdate>
+              2023-01-29
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Economist/">#Economist</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E7%9B%AE%E5%BD%95/2023/01/22/" target="_self">
+          目录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E7%9B%AE%E5%BD%95/2023/01/22/" target="_self">
+        <div>
+          书籍01：银河帝国1.基地   &nbsp;   书籍02：哈利波特   &nbsp;   01.木材的商业化   &nbsp;     02.生命的元素   &nbsp;    03.北美巨型动物的过度杀戮   &nbsp;     04.星星之死   &nbsp;      05.巴西独立的成就   &nbsp;   06.美国的铁路   &nbsp;   07.十九世纪欧洲的人口增长情况
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-22 15:36" pubdate>
+              2023-01-22
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E5%A4%9C%E9%9B%A8/2023/01/17/" target="_self">
+          夜雨
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E5%A4%9C%E9%9B%A8/2023/01/17/" target="_self">
+        <div>
+          已经到了秋夜满地枯黄落叶你的身影徘徊在我世界寻觅却不在视野 走过无人巷街雨滴逐渐猛烈我的回忆触碰到你笑靥故事却为何止歇 眼中的你曾沐浴月光深夜的雨巷我偶然回想撑伞遇到娉婷的模样是谁悄然带走这期望 梦里的你曾醉心花香夜巷深雨中记忆都渺茫如若能与你重逢一场是谁翩然笑意也飞扬
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-17 21:27" pubdate>
+              2023-01-17
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E5%A4%9C%E8%A7%81%E6%B5%81%E6%98%9F/2023/01/11/" target="_self">
+          夜见流星
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E5%A4%9C%E8%A7%81%E6%B5%81%E6%98%9F/2023/01/11/" target="_self">
+        <div>
+          每一颗黯然坠落的星辰都诉说着关于自己的真相而舞台上的表演者眉飞色舞是露馅之前的努力伪装 我坐听烟花爆竹不停地响送别无辜的陌生的人去天堂某天中午的唢呐吹半晌离开了人间的四季与月光 凝滞的心沉默没多讲渐渐到了午夜的走廊回忆里鲜艳的是人们笑语欢唱如今呜咽写挽联两行 如果年轻必然面目苍苍谁记得你旧年的梦想等百代后新人都遗忘生生灭灭有什么荣光
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2023-01-11 19:48" pubdate>
+              2023-01-11
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E5%B1%8B%E6%AA%90/2022/12/24/" target="_self">
+          屋檐
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E5%B1%8B%E6%AA%90/2022/12/24/" target="_self">
+        <div>
+          夏雨连绵不绝，你无伞可撑，与我徘徊在屋檐下等候。你的睫毛沾染些许飞溅的雨雾，在我面前，正是巧笑嫣然。 凝眸不语的光阴里，前尘往事在我脑海闪过，而我却从没有问你是否记得。无端的遇见，无故的消散，没有缘由的记住与忘记，我参不透其中的必然性。 淋过一场有你的夏雨，于是各自飘散在人海，奔赴各自的悲欢忧乐，像是、不曾围绕过彼此一样。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-12-24 19:47" pubdate>
+              2022-12-24
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">#碎碎念</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/%E6%98%8E%E9%95%9C%E7%85%A7%E5%BF%83/2022/12/21/" target="_self">
+          明镜照心
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/%E6%98%8E%E9%95%9C%E7%85%A7%E5%BF%83/2022/12/21/" target="_self">
+        <div>
+          尘埃拂拭 明镜生光彩巍峨宫殿焚于项羽的火把嬴政雕刻 国玺传儿孙孟姜女的夫婿埋到城墙里 听万众赞叹 千篇一律自缚手脚作牛羊赏天下珍宝 流光溢彩忽然问君何不食肉糜 绝顶智谋 锱铢必较无量贤徳称赞是君子敢爱敢恨 实话实说丑态百出反而成小人 明镜照得暗夜的鬼魅却照不亮变色的人心而灰烬无法再次燃烧除非毒蛇放弃对你噬咬
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-12-21 19:46" pubdate>
+              2022-12-21
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#board">18</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.6.4.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
