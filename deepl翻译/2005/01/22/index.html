@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>deepl翻译 | 凡</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="功能描述：通过deepl的api实现英译中，将英文与中文拼接，重新写入新的txt文件具体效果可见： 目录   &amp;nbsp;  #01.实现deepl翻译，封装功能函数#deepl_txt.py import requests from fastlid import fastlid   def Translator_deepl(text):      lang &#x3D; fastlid(text)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="deepl翻译">
+<meta property="og:url" content="https://fan4love.github.io/deepl%E7%BF%BB%E8%AF%91/2005/01/22/index.html">
+<meta property="og:site_name" content="凡">
+<meta property="og:description" content="功能描述：通过deepl的api实现英译中，将英文与中文拼接，重新写入新的txt文件具体效果可见： 目录   &amp;nbsp;  #01.实现deepl翻译，封装功能函数#deepl_txt.py import requests from fastlid import fastlid   def Translator_deepl(text):      lang &#x3D; fastlid(text)">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2005-01-22T08:49:47.000Z">
+<meta property="article:modified_time" content="2023-10-10T19:17:44.720Z">
+<meta property="article:author" content="x">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="凡" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">凡</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">见字如面</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fan4love.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-deepl翻译" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/deepl%E7%BF%BB%E8%AF%91/2005/01/22/" class="article-date">
+  <time class="dt-published" datetime="2005-01-22T08:49:47.000Z" itemprop="datePublished">2005-01-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      deepl翻译
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>功能描述：通过deepl的api实现英译中，将英文与中文拼接，重新写入新的txt文件<br>具体效果可见：<ul></p>
+<li><h6><a target="_blank" rel="noopener" href="https://xiaofan.netlify.app/mu-lu">目录</a></h6><h6></h6>
+</li>
+</ul>
+<p>&nbsp;</p>
+
+<p>#01.实现deepl翻译，封装功能函数<br>#deepl_txt.py</p>
+<pre><code>import requests
+from fastlid import fastlid
+
+
+def Translator_deepl(text):
+
+    lang = fastlid(text)
+    if lang == &quot;zh&quot;:
+        from_lang, to_lang = &quot;zh&quot;, &quot;en&quot;
+    elif lang == &quot;en&quot;:
+        from_lang, to_lang = &quot;en&quot;, &quot;zh&quot;
+    else:
+        from_lang = lang[0]
+        to_lang = &quot;zh&quot;
+
+    data = [text, from_lang, to_lang]
+    json_data = &#123;&quot;data&quot;: data&#125;
+
+    url = &quot;https://hf.space/embed/mikeee/gradio-deepl/+/api/predict&quot;
+    resp = requests.post(url, json=json_data)
+    trans = resp.json()
+
+
+    return (f&quot;译:&#123;trans[&#39;data&#39;][0]&#125;&quot;)
+</code></pre>
+<p>#02.实现中英文的拼接，将结果写入空白文件：note01.txt<br>#translator_deepl_txt.py</p>
+<pre><code>from deepl_txt import Translator_deepl
+</code></pre>
+<p>#打开需要翻译的txt文件：newspaper02.txt</p>
+<pre><code>with open(&quot;newspaper02&quot;, &quot;r&quot;,encoding=&quot;utf-8&quot;) as f:
+
+                            english = f.read()
+            
+with open(&quot;note01&quot;, &quot;w&quot;,encoding=&quot;utf-8&quot;) as f2:
+        while len(english) &gt; 0:
+
+                eng = english.split(&#39;.&#39;)[0]
+
+                 f2.write(str(eng+&quot;\n&quot;))
+
+                 chinese=Translator_deepl(eng)
+
+                 f2.write(str(chinese+&quot;\n&quot;))
+                 english = english[len(english.split(&#39;.&#39;)[0]) + 1:]
+
+        f2.close()
+
+
+  f.close()
+</code></pre>
+<p>#总结：</p>
+<p>#fastlid库需要fasttext库的底层支持，网站下载与Python3.9匹配的fasttext.wheel。需要用pip install 在终端安装，这样才可以正常运行。</p>
+<p>#with open(“note01”, “w”,encoding&#x3D;”utf-8”)  —&gt;需要加入解码格式encoding&#x3D;”utf-8”，否则报错。</p>
+<p>#翻译函数是调用deepl的api,还可以考虑百度、有道、金山、腾讯的翻译api。不过后四个都需要注册，deepl直接使用，方便快捷。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fan4love.github.io/deepl%E7%BF%BB%E8%AF%91/2005/01/22/" data-id="clnn8fjgu004se0u53sbsbtk3" data-title="deepl翻译" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/difficult%20conversation%E8%AF%8D%E6%B1%87%E8%A1%A8/2008/03/04/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          difficult conversation词汇表
+        
+      </div>
+    </a>
+  
+  
+    <a href="/%E6%98%9F%E6%98%9F%E4%B9%8B%E6%AD%BB/2005/01/22/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">星星之死</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Economist/" rel="tag">Economist</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A6%E6%91%98/" rel="tag">书摘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%97/" rel="tag">小诗</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AE%B0/" rel="tag">日记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AD%8C%E8%AF%8D/" rel="tag">歌词</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Economist/" style="font-size: 20px;">Economist</a> <a href="/tags/Python/" style="font-size: 11.67px;">Python</a> <a href="/tags/%E4%B9%A6%E6%91%98/" style="font-size: 10px;">书摘</a> <a href="/tags/%E5%B0%8F%E8%AF%97/" style="font-size: 18.33px;">小诗</a> <a href="/tags/%E6%97%A5%E8%AE%B0/" style="font-size: 13.33px;">日记</a> <a href="/tags/%E6%AD%8C%E8%AF%8D/" style="font-size: 15px;">歌词</a> <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" style="font-size: 16.67px;">碎碎念</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/10/">October 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">April 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">January 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">December 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">October 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">September 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">August 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">November 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/01/">January 2011</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2005/01/">January 2005</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hello-world/2023/10/12/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/2023/10/12/">我的第一篇</a>
+          </li>
+        
+          <li>
+            <a href="/%E5%BE%88%E5%A5%BD/2023/10/12/">很好</a>
+          </li>
+        
+          <li>
+            <a href="/%E6%88%91%E5%9C%A8%E6%B5%8B%E8%AF%95/2023/10/11/">我在测试</a>
+          </li>
+        
+          <li>
+            <a href="/%E6%9C%80%E6%96%B0%E8%BF%9B%E5%B1%95/2023/10/10/">最新进展</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 x<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
